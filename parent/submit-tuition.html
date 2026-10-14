@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}::selection{background-color:#145A5A;color:#FFFFFF;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed":"#aeeeed","inverse-surface":"#1c3434","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#00504d","surface-tint":"#266868","on-error":"#ffffff","secondary":"#086a66","error-container":"#ffdad6","on-tertiary-fixed":"#400100","background":"#e4fffe","surface-container":"#d8f3f2","outline":"#6f7978","secondary-container":"#a2f1eb","on-surface-variant":"#3f4948","on-tertiary-container":"#ffb0a3","surface":"#e4fffe","on-secondary-fixed":"#00201e","primary-container":"#145a5a","on-tertiary":"#ffffff","on-surface":"#061f1f","on-error-container":"#93000a","on-tertiary-fixed-variant":"#82261a","on-secondary-container":"#16706c","on-primary":"#ffffff","tertiary":"#70190f","primary":"#004142","tertiary-container":"#903023","on-secondary":"#ffffff","primary-fixed-dim":"#93d2d1","on-primary-container":"#90cfce","inverse-primary":"#93d2d1","tertiary-fixed":"#ffdad4","surface-dim":"#c5dfdf","on-primary-fixed":"#002020","surface-container-low":"#def9f8","surface-container-high":"#d3eded","tertiary-fixed-dim":"#ffb4a7","error":"#ba1a1a","surface-bright":"#e4fffe","on-primary-fixed-variant":"#004f50","secondary-fixed-dim":"#86d4cf","secondary-fixed":"#a2f1eb","surface-container-highest":"#cde8e7","surface-variant":"#cde8e7","on-background":"#061f1f","outline-variant":"#bfc8c8","inverse-on-surface":"#dbf6f5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2rem","space-3xl":"4.5rem","space-md":"1rem","space-2xl":"3rem","margin-mobile":"1.25rem","gutter":"1.5rem","margin":"3rem","space-xs":"0.25rem","gutter-mobile":"1rem"},"fontFamily":{"display-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"800"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.005em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"50px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"68px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script><link rel="stylesheet" href="../assets/ht-shared.css"/>
+<script src="../assets/ht-data.js" defer></script>
+<script src="../assets/ht-app.js" defer></script>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[8px_0_24px_rgba(20,90,90,0.06),-4px_0_12px_rgba(255,255,255,0.8)]"><div class="flex flex-col gap-8"><div class="px-4 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[4px_4px_10px_rgba(20,90,90,0.15),-2px_-2px_6px_rgba(255,255,255,0.9)]"><span class="material-symbols-outlined text-[24px]">school</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight">Haider Tutors</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Parent &amp; Student Portal</span></div></div><nav class="flex flex-col gap-2" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[4px_6px_14px_rgba(20,90,90,0.2),inset_0_1px_1px_rgba(255,255,255,0.35)]"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary font-bold shadow-[4px_6px_14px_rgba(20,90,90,0.2),inset_0_1px_1px_rgba(255,255,255,0.35)]" data-path="submit-tuition" href="submit-tuition.html"><span class="material-symbols-outlined text-[20px]">post_add</span><span>Submit Tuition</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-requests" href="my-requests.html"><span class="material-symbols-outlined text-[20px]">assignment</span><span>My Tuition Requests</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-profile" href="profile.html"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>My Profile</span></a></nav></div><div class="px-2"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all" data-path="logout" href="login.html"><span class="material-symbols-outlined text-[20px]">logout</span><span>Logout</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_4px_20px_rgba(20,90,90,0.04)] px-8 flex items-center justify-between"><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-80 pl-10 pr-4 py-2 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder-on-surface-variant/70 focus:outline-none shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" placeholder="Search requests, subjects..." type="text"/></div></div><div class="flex items-center gap-6"><button data-ht-demo="Notifications are not available in this demo preview." class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary shadow-[4px_4px_10px_rgba(20,90,90,0.05),-3px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_14px_rgba(20,90,90,0.08),-4px_-4px_10px_rgba(255,255,255,0.95)] transition-all relative"><span class="material-symbols-outlined<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-low"></span></button><div class="flex items-center gap-3 pl-3"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Dr. Salman Khan</span><span class="font-label-sm text-label-sm text-on-surface-variant">Parent / Guardian</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface px-8 pb-12"><div class="flex flex-col w-full">
+<!-- Top Progress & Context Bar -->
+<div class="w-full mb-8">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">Formal Intake</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Academic Cycle 2025–2026</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Submit a Tuition Requirement</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Provide your student's curriculum, schedule preferences, and academic goals. Our academic committee will review, curate accredited tutor profiles, and formalize the requirement.
+        </p>
+</div>
+<!-- Quick Stats Clay Tag -->
+<div class="flex items-center gap-4 bg-surface-container-low px-5 py-3 rounded-2xl shadow-[6px_6px_16px_rgba(20,90,90,0.06),-4px_-4px_12px_rgba(255,255,255,0.95)]">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Matching SLA</span>
+<span class="font-title-md text-title-md text-primary font-bold">Within 24 Hours</span>
+</div>
+</div>
+</div>
+<!-- Stepper Indicator -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6">
+<div class="flex items-center gap-3 p-3 bg-primary-container text-on-primary rounded-xl shadow-[3px_4px_10px_rgba(20,90,90,0.18)]">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<span class="font-label-md text-label-md truncate">Student Info</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low text-on-surface rounded-xl shadow-[4px_4px_10px_rgba(20,90,90,0.04),-3px_-3px_8px_rgba(255,255,255,0.9)]">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<span class="font-label-md text-label-md truncate">Location &amp; Mode</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low text-on-surface rounded-xl shadow-[4px_4px_10px_rgba(20,90,90,0.04),-3px_-3px_8px_rgba(255,255,255,0.9)]">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<span class="font-label-md text-label-md truncate">Curriculum</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low text-on-surface rounded-xl shadow-[4px_4px_10px_rgba(20,90,90,0.04),-3px_-3px_8px_rgba(255,255,255,0.9)]">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<span class="font-label-md text-label-md truncate">Timings &amp; Budget</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low text-on-surface rounded-xl shadow-[4px_4px_10px_rgba(20,90,90,0.04),-3px_-3px_8px_rgba(255,255,255,0.9)] col-span-2 md:col-span-1">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-bold">5</span>
+<span class="font-label-md text-label-md truncate">Learning Focal</span>
+</div>
+</div>
+</div>
+<!-- Main Multi-section Form -->
+<form class="flex flex-col gap-8 pb-16" id="tuitionForm" onsubmit="event.preventDefault(); submitRequirementForm();">
+<!-- SECTION 1: Student & Guardian Information -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-[8px_8px_24px_rgba(20,90,90,0.07),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3 pb-5 mb-6 border-b border-surface-container">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">person_outline</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Section 1: Student &amp; Guardian Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Primary candidate details and verified point of contact.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Student Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Student Full Name <span class="text-tertiary-container font-bold">*</span></span>
+<span class="text-primary hidden text-xs flex items-center gap-0.5" id="val-check-name"><span class="material-symbols-outlined text-[14px]">check_circle</span> Valid</span>
+</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)] transition-all" id="studentName" placeholder="e.g. Rayan Khan" required="" type="text" value="Rayan Khan"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">badge</span>
+</div>
+</div>
+<!-- Student Grade / Year -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Student Grade / Year <span class="text-tertiary-container font-bold">*</span></span>
+</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)] transition-all" id="studentGrade" placeholder="e.g. Grade 10 / O-Levels Year 2" required="" type="text" value="Grade 10 / O-Levels Year 2"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">school</span>
+</div>
+</div>
+<!-- Parent / Guardian Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Parent / Guardian Name <span class="text-tertiary-container font-bold">*</span></span>
+<span class="text-on-surface-variant/80 font-label-sm text-label-sm">(Verified Portal User)</span>
+</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container rounded-xl font-body-sm text-body-sm text-on-surface/80 cursor-not-allowed shadow-[inset_1px_1px_3px_rgba(20,90,90,0.05)]" id="parentName" readonly="" type="text" value="Dr. Salman Khan"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-secondary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Primary Contact Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Primary Contact Email <span class="text-tertiary-container font-bold">*</span></span>
+</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)] transition-all" id="contactEmail" placeholder="salman.khan@gmail.com" required="" type="email" value="salman.khan@gmail.com"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">mail</span>
+</div>
+</div>
+<!-- Phone / WhatsApp Number -->
+<div class="flex flex-col gap-2 lg:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Phone / WhatsApp Number <span class="text-tertiary-container font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Include country dial code</span>
+</label>
+<div class="grid grid-cols-3 md:grid-cols-4 gap-3">
+<div class="relative col-span-1">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]">
+<option selected="" value="+92">🇵🇰 +92 (PK)</option>
+<option value="+971">🇦🇪 +971 (AE)</option>
+<option value="+44">🇬🇧 +44 (UK)</option>
+<option value="+1">🇺🇸 +1 (US)</option>
+<option value="+966">🇸🇦 +966 (SA)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="relative col-span-2 md:col-span-3">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)] transition-all" id="contactPhone" placeholder="300 1234567" required="" type="tel" value="300 1234567"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">call</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Geographic & Delivery Details -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-[8px_8px_24px_rgba(20,90,90,0.07),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3 pb-5 mb-6 border-b border-surface-container">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Section 2: Geographic &amp; Delivery Details</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classroom venue expectations, regional alignment, and delivery model.</p>
+</div>
+</div>
+<!-- Mode Selector (Tactile Clay Cards) -->
+<div class="flex flex-col gap-3 mb-8">
+<label class="font-label-md text-label-md text-on-surface">Preferred Teaching Mode <span class="text-tertiary-container font-bold">*</span></label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="modeSelectorGroup">
+<label class="relative flex flex-col p-5 rounded-2xl bg-surface-container-low cursor-pointer transition-all border border-transparent shadow-[4px_4px_12px_rgba(20,90,90,0.06),-3px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_16px_rgba(20,90,90,0.09)] select-none">
+<input checked="" class="sr-only peer" name="teachingMode" type="radio" value="home"/>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">home_pin</span>
+</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary">
+<div class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">Home Tuition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">In-person vetted educator traveling to student residence.</span>
+</label>
+<label class="relative flex flex-col p-5 rounded-2xl bg-surface-container-low cursor-pointer transition-all border border-transparent shadow-[4px_4px_12px_rgba(20,90,90,0.06),-3px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_16px_rgba(20,90,90,0.09)] select-none">
+<input class="sr-only peer" name="teachingMode" type="radio" value="online"/>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary">
+<div class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">Online Tuition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Interactive Global live 1-on-1 digital board classroom.</span>
+</label>
+<label class="relative flex flex-col p-5 rounded-2xl bg-surface-container-low cursor-pointer transition-all border border-transparent shadow-[4px_4px_12px_rgba(20,90,90,0.06),-3px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_16px_rgba(20,90,90,0.09)] select-none">
+<input class="sr-only peer" name="teachingMode" type="radio" value="hybrid"/>
+<div class="flex items-center justify-between mb-3">
+<span class="w-9 h-9 rounded-xl bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary">
+<div class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">Hybrid Tuition</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Blended rotation of face-to-face labs &amp; online reviews.</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Country Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Country <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="countrySelect">
+<option selected="" value="Pakistan">Pakistan</option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="UAE">United Arab Emirates</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Qatar">Qatar</option>
+<option value="Canada">Canada</option>
+<option value="Australia">Australia</option>
+<option value="Germany">Germany</option>
+<option value="Japan">Japan</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- State / Province -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">State / Province <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="province" placeholder="e.g. Islamabad Capital Territory" required="" type="text" value="Islamabad Capital Territory"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">map</span>
+</div>
+</div>
+<!-- City -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">City <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="cityName" placeholder="e.g. Islamabad" required="" type="text" value="Islamabad"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">apartment</span>
+</div>
+</div>
+<!-- Area / Sector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Area / Sector <span class="text-on-surface-variant font-normal">(In-Person)</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="sectorArea" placeholder="e.g. Sector F-7/2, Street 14" type="text" value="Sector F-7/2, Street 14"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">signpost</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Academic Specification & Curriculum -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-[8px_8px_24px_rgba(20,90,90,0.07),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3 pb-5 mb-6 border-b border-surface-container">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Section 3: Academic Specification &amp; Curriculum</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Syllabus requirements, exam board governance, and sitting timelines.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Target Subject Pills -->
+<div class="flex flex-col gap-3">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Target Subject(s) <span class="text-tertiary-container font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Click pills to toggle</span>
+</label>
+<div class="flex flex-wrap gap-2.5 p-4 rounded-2xl bg-surface-container-low shadow-[inset_2px_2px_5px_rgba(20,90,90,0.05),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]">
+<!-- Active Pill -->
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-[2px_3px_6px_rgba(20,90,90,0.2)] transition-all flex items-center gap-1.5" data-active="true" onclick="toggleSubjectPill(this)" type="button">
+<span>Cambridge IGCSE Physics</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<!-- Active Pill -->
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-[2px_3px_6px_rgba(20,90,90,0.2)] transition-all flex items-center gap-1.5" data-active="true" onclick="toggleSubjectPill(this)" type="button">
+<span>Additional Mathematics</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<!-- Active Pill -->
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-[2px_3px_6px_rgba(20,90,90,0.2)] transition-all flex items-center gap-1.5" data-active="true" onclick="toggleSubjectPill(this)" type="button">
+<span>Chemistry (0620)</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<!-- Inactive Pills -->
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface text-primary shadow-[2px_2px_5px_rgba(20,90,90,0.05)] hover:bg-surface-container transition-all flex items-center gap-1.5" data-active="false" onclick="toggleSubjectPill(this)" type="button">
+<span>Biology (0610)</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">add</span>
+</button>
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface text-primary shadow-[2px_2px_5px_rgba(20,90,90,0.05)] hover:bg-surface-container transition-all flex items-center gap-1.5" data-active="false" onclick="toggleSubjectPill(this)" type="button">
+<span>Computer Science</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">add</span>
+</button>
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface text-primary shadow-[2px_2px_5px_rgba(20,90,90,0.05)] hover:bg-surface-container transition-all flex items-center gap-1.5" data-active="false" onclick="toggleSubjectPill(this)" type="button">
+<span>English as a First Language</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">add</span>
+</button>
+<button class="subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface text-primary shadow-[2px_2px_5px_rgba(20,90,90,0.05)] hover:bg-surface-container transition-all flex items-center gap-1.5" data-active="false" onclick="toggleSubjectPill(this)" type="button">
+<span>Economics</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">add</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span> 3 subjects actively earmarked for coordination.
+          </span>
+</div>
+<!-- Curriculum & Series Dropdowns -->
+<div class="flex flex-col gap-6 justify-between">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Examination Board / Curriculum <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="examBoard">
+<option selected="" value="CAIE">Cambridge Assessment International Education (CAIE)</option>
+<option value="Edexcel">Edexcel Pearson International</option>
+<option value="AQA">Oxford AQA International Examinations</option>
+<option value="IB">International Baccalaureate (IB MYP / DP)</option>
+<option value="FBISE">Federal Board Islamabad (FBISE)</option>
+<option value="AP">College Board Advanced Placement (AP)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Target Examination Session <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="examSeries" placeholder="e.g. May/June 2026 Series" type="text" value="May/June 2026 Series"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">event</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Schedule, Timings & Budget -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-[8px_8px_24px_rgba(20,90,90,0.07),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3 pb-5 mb-6 border-b border-surface-container">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Section 4: Schedule, Timings &amp; Budget</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure weekly intensity, preferred calendar windows, and remuneration scale.</p>
+</div>
+</div>
+<!-- Preferred Days Checkboxes -->
+<div class="flex flex-col gap-3 mb-6">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Preferred Teaching Days <span class="text-tertiary-container font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recommended: minimum 3 days/week</span>
+</label>
+<div class="grid grid-cols-7 gap-2 sm:gap-3">
+<!-- Mon (Checked) -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-primary-container text-on-primary shadow-[3px_4px_10px_rgba(20,90,90,0.2)] transition-all" data-active="true" onclick="toggleDayPill(this)" type="button">
+            Mon
+          </button>
+<!-- Tue -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-surface text-on-surface shadow-[2px_2px_6px_rgba(20,90,90,0.05),-2px_-2px_6px_rgba(255,255,255,0.9)] hover:bg-surface-container transition-all" data-active="false" onclick="toggleDayPill(this)" type="button">
+            Tue
+          </button>
+<!-- Wed (Checked) -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-primary-container text-on-primary shadow-[3px_4px_10px_rgba(20,90,90,0.2)] transition-all" data-active="true" onclick="toggleDayPill(this)" type="button">
+            Wed
+          </button>
+<!-- Thu -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-surface text-on-surface shadow-[2px_2px_6px_rgba(20,90,90,0.05),-2px_-2px_6px_rgba(255,255,255,0.9)] hover:bg-surface-container transition-all" data-active="false" onclick="toggleDayPill(this)" type="button">
+            Thu
+          </button>
+<!-- Fri (Checked) -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-primary-container text-on-primary shadow-[3px_4px_10px_rgba(20,90,90,0.2)] transition-all" data-active="true" onclick="toggleDayPill(this)" type="button">
+            Fri
+          </button>
+<!-- Sat -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-surface text-on-surface shadow-[2px_2px_6px_rgba(20,90,90,0.05),-2px_-2px_6px_rgba(255,255,255,0.9)] hover:bg-surface-container transition-all" data-active="false" onclick="toggleDayPill(this)" type="button">
+            Sat
+          </button>
+<!-- Sun -->
+<button class="day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-surface text-on-surface shadow-[2px_2px_6px_rgba(20,90,90,0.05),-2px_-2px_6px_rgba(255,255,255,0.9)] hover:bg-surface-container transition-all" data-active="false" onclick="toggleDayPill(this)" type="button">
+            Sun
+          </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Preferred Time Slots -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Preferred Time Slots <span class="text-tertiary-container font-bold">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]">
+<option value="afternoon">Afternoons: 4:00 PM – 6:00 PM</option>
+<option selected="" value="evening">Evenings: 6:00 PM – 8:00 PM</option>
+<option value="late-evening">Night: 8:00 PM – 10:00 PM</option>
+<option value="weekends">Weekends Flexible (Morning/Afternoon)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Estimated Sessions per Week -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Estimated Sessions per Week</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" placeholder="e.g. 3 sessions / 1.5 hrs each" type="text" value="3 sessions / 1.5 hrs each"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant/60 text-[18px]">hourglass_top</span>
+</div>
+</div>
+<!-- Budget Range & Currency -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface">Target Monthly Budget <span class="text-tertiary-container font-bold">*</span></label>
+<div class="flex gap-2">
+<div class="relative w-28 shrink-0">
+<select class="w-full appearance-none px-3 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]">
+<option selected="" value="PKR">PKR</option>
+<option value="USD">USD ($)</option>
+<option value="GBP">GBP (£)</option>
+<option value="AED">AED</option>
+<option value="SAR">SAR</option>
+<option value="CAD">CAD</option>
+<option value="AUD">AUD</option>
+<option value="EUR">EUR (€)</option>
+<option value="JPY">JPY (¥)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3.5 text-on-surface-variant pointer-events-none text-[16px]">expand_more</span>
+</div>
+<div class="relative flex-1">
+<input class="w-full px-4 py-3 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)]" id="budgetAmount" placeholder="45,000" type="text" value="45,000"/>
+<span class="absolute right-3 top-3 font-label-sm text-label-sm text-on-surface-variant/70">/ month</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Specific Learning Needs & Bottlenecks -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-[8px_8px_24px_rgba(20,90,90,0.07),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3 pb-5 mb-6 border-b border-surface-container">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Section 5: Specific Learning Needs &amp; Bottlenecks</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diagnostics, prior exam assessments, topical gaps, and targeted mentor style.</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Academic Diagnostic Notes &amp; Pedagogical Goals</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Optional but recommended</span>
+</label>
+<textarea class="w-full p-4 bg-surface-container-low rounded-2xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-[inset_2px_2px_6px_rgba(20,90,90,0.07),inset_-2px_-2px_6px_rgba(255,255,255,0.85)]" placeholder="e.g. Student received B in mocks for Physics. Struggles with Kinematics vector calculus and Organic chemistry synthesis chains. Demands rigorous past-paper timed sessions (2018-2024 series) and conceptually patient step-by-step guidance." rows="4">Student achieved B in internal midterm mocks. Demonstrates strong intuition in theoretical physics but struggles with mathematical deductions in Kinematics and Thermal Physics. Requires structured topical past-paper drilling and diagnostic feedback after every weekly unit.</textarea>
+</div>
+<!-- Protocol Notice Callout -->
+<div class="mt-6 p-4 rounded-2xl bg-surface-container flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-bold">Academic Review Protocol</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Every submission is reviewed within 24 operational hours by our Islamabad central academic coordination committee. Only credential-verified, background-checked tutors matching this syllabus code will be shortlisted.
+          </p>
+</div>
+</div>
+</div>
+<!-- Sticky Form Actions Card -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-3xl bg-surface-container-lowest shadow-[8px_10px_28px_rgba(20,90,90,0.09),-6px_-6px_20px_rgba(255,255,255,0.95)]">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All inputs verified and ready for intake formalization.</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="px-6 py-3 rounded-xl bg-surface-container-lowest font-label-lg text-label-lg text-primary shadow-[4px_4px_10px_rgba(20,90,90,0.05),-3px_-3px_8px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_14px_rgba(20,90,90,0.09),-4px_-4px_10px_rgba(255,255,255,0.98)] transition-all flex items-center gap-2" onclick="handleDraftSave()" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="px-7 py-3 rounded-xl bg-tertiary-container hover:bg-tertiary text-on-primary font-label-lg text-label-lg shadow-[4px_6px_16px_rgba(144,48,35,0.28),inset_0_1px_2px_rgba(255,255,255,0.4)] hover:shadow-[6px_8px_20px_rgba(144,48,35,0.35)] active:translate-y-0.5 transition-all flex items-center gap-2" type="submit">
+<span>Submit Tuition Requirement</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 text-center">Demo preview: submissions are shown locally and are not sent to any server.</p>
+</form>
+<!-- Success Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/30 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" id="successModal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-3xl p-8 shadow-[16px_24px_40px_rgba(20,90,90,0.22),-10px_-10px_30px_rgba(255,255,255,0.98)] transform scale-95 transition-transform duration-300 flex flex-col items-center text-center">
+<!-- Icon Graphic -->
+<div class="w-20 h-20 rounded-3xl bg-secondary-container text-primary flex items-center justify-center mb-5 shadow-[6px_6px_18px_rgba(20,90,90,0.12),-4px_-4px_12px_rgba(255,255,255,0.9)]">
+<span class="material-symbols-outlined text-[44px]">task_alt</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold uppercase tracking-wider mb-2">Requirement Formalized</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Requirement Submitted Successfully</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">
+        Your tuition intake file has been generated with central tracking code:
+      </p>
+<!-- Tracking Badge -->
+<div class="my-5 px-6 py-3 rounded-2xl bg-surface-container font-headline-sm text-headline-sm text-primary tracking-wider font-bold shadow-[inset_2px_2px_5px_rgba(20,90,90,0.06),inset_-2px_-2px_5px_rgba(255,255,255,0.85)] flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">token</span>
+<span id="trackingCode">HT-REQ-2025-0845</span>
+</div>
+<!-- Quick summary card -->
+<div class="w-full text-left p-4 rounded-2xl bg-surface-container-low mb-6 flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span class="font-medium">Student:</span>
+<span class="font-semibold text-on-surface" id="summaryStudent">Rayan Khan (O-Levels Year 2)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-medium">Curriculum:</span>
+<span class="font-semibold text-on-surface">Cambridge Assessment (CAIE)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-medium">Selected Subjects:</span>
+<span class="font-semibold text-on-surface">3 Specialized Subjects</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-medium">Next Milestone:</span>
+<span class="font-semibold text-secondary">Academic Review &amp; Shortlisting (24h)</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full">
+<button class="flex-1 py-3.5 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg shadow-[4px_6px_14px_rgba(20,90,90,0.2)] hover:bg-primary transition-all" onclick="closeModalAndGo()" type="button">
+          View My Tuition Requests
+        </button>
+<button class="px-5 py-3.5 rounded-xl bg-surface-container font-label-lg text-label-lg text-primary hover:bg-surface-container-high transition-all" onclick="closeModalOnly()" type="button">
+          Dismiss
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast for Save Draft -->
+<div class="fixed bottom-8 right-8 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-primary text-on-primary shadow-[8px_12px_24px_rgba(0,65,66,0.3)] transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">bookmark_added</span>
+<span class="font-body-sm text-body-sm font-medium" id="toastMessage">Draft saved to your portal storage.</span>
+</div>
+</div>
+<script>
+  function toggleSubjectPill(btn) {
+    const isActive = btn.getAttribute('data-active') === 'true';
+    const icon = btn.querySelector('.material-symbols-outlined');
+    
+    if (isActive) {
+      btn.setAttribute('data-active', 'false');
+      btn.className = 'subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface text-primary shadow-[2px_2px_5px_rgba(20,90,90,0.05)] hover:bg-surface-container transition-all flex items-center gap-1.5';
+      icon.textContent = 'add';
+      icon.className = 'material-symbols-outlined text-[16px] opacity-40';
+    } else {
+      btn.setAttribute('data-active', 'true');
+      btn.className = 'subject-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-[2px_3px_6px_rgba(20,90,90,0.2)] transition-all flex items-center gap-1.5';
+      icon.textContent = 'check';
+      icon.className = 'material-symbols-outlined text-[16px]';
+    }
+  }
+
+  function toggleDayPill(btn) {
+    const isActive = btn.getAttribute('data-active') === 'true';
+    if (isActive) {
+      btn.setAttribute('data-active', 'false');
+      btn.className = 'day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-surface text-on-surface shadow-[2px_2px_6px_rgba(20,90,90,0.05),-2px_-2px_6px_rgba(255,255,255,0.9)] hover:bg-surface-container transition-all';
+    } else {
+      btn.setAttribute('data-active', 'true');
+      btn.className = 'day-pill py-3 rounded-xl font-label-md text-label-md text-center bg-primary-container text-on-primary shadow-[3px_4px_10px_rgba(20,90,90,0.2)] transition-all';
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    const label = document.getElementById('toastMessage');
+    if (label && toast) {
+      label.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+  }
+
+  function handleDraftSave() {
+    showToast('Draft saved in this browser only (demo preview \u2014 not sent to a server).');
+  }
+
+  function submitRequirementForm() {
+    const tc = document.getElementById('trackingCode');
+    if (tc) tc.textContent = 'HT-REQ-2025-' + (846 + Math.floor(Math.random() * 140));
+    const student = document.getElementById('studentName')?.value || 'Rayan Khan';
+    const grade = document.getElementById('studentGrade')?.value || 'Grade 10';
+    const summary = document.getElementById('summaryStudent');
+    if (summary) {
+      summary.textContent = student + ' (' + grade + ')';
+    }
+
+    const modal = document.getElementById('successModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        const box = modal.querySelector('div');
+        if (box) box.classList.remove('scale-95');
+      }, 20);
+    }
+  }
+
+  function closeModalOnly() {
+    const modal = document.getElementById('successModal');
+    if (modal) {
+      modal.classList.add('opacity-0');
+      const box = modal.querySelector('div');
+      if (box) box.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+  }
+
+  function closeModalAndGo() {
+    window.location.href = 'my-requests.html';
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModalOnly();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var sm = document.getElementById('successModal');
+    if (sm) sm.addEventListener('click', function (e) { if (e.target === this) closeModalOnly(); });
+  });
+</script></main></div></body></html>

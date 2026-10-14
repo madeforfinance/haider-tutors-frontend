@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Haider Tutors | Global Academic Excellence</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#145A5A",
+            "primary-dark": "#0B3C3C",
+            "secondary": "#287C78",
+            "secondary-dark": "#165855",
+            "accent-coral": "#F07865",
+            "accent-coral-hover": "#DF6552",
+            "accent-coral-light": "#FF8F7D",
+            "accent-amber": "#EAA850",
+            "accent-amber-light": "#FEF5E7",
+            "accent-emerald": "#1F8A65",
+            "accent-emerald-light": "#E1F7EE",
+            "accent-indigo": "#3B5998",
+            "accent-plum": "#7A3E65",
+            "surface-mint": "#F4F8F5",
+            "surface-pale": "#E5F1EB",
+            "surface-white": "#FFFFFF",
+            "text-main": "#203838",
+            "text-muted": "#5F7472",
+            "border-neutral": "#DCE7E2",
+            "state-success": "#247653",
+            "state-warning": "#A96B21",
+            "state-error": "#BD4658",
+            "state-info": "#2868A6"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'clay-card': '8px 8px 20px rgba(20, 90, 90, 0.07), -6px -6px 18px rgba(255, 255, 255, 0.95)',
+            'clay-card-hover': '12px 14px 28px rgba(20, 90, 90, 0.13), -8px -8px 22px rgba(255, 255, 255, 1)',
+            'clay-card-coral': '8px 8px 22px rgba(240, 120, 101, 0.14), -6px -6px 18px rgba(255, 255, 255, 0.95)',
+            'clay-card-amber': '8px 8px 20px rgba(234, 168, 80, 0.12), -6px -6px 18px rgba(255, 255, 255, 0.95)',
+            'clay-card-emerald': '8px 8px 20px rgba(31, 138, 101, 0.12), -6px -6px 18px rgba(255, 255, 255, 0.95)',
+            'clay-btn-teal': '4px 4px 12px rgba(20, 90, 90, 0.28), -2px -2px 8px rgba(255, 255, 255, 0.7)',
+            'clay-btn-coral': '4px 4px 14px rgba(240, 120, 101, 0.38), -2px -2px 8px rgba(255, 255, 255, 0.7)',
+            'clay-btn-white': '4px 4px 12px rgba(20, 90, 90, 0.06), -3px -3px 10px rgba(255, 255, 255, 0.95)',
+            'clay-inset': 'inset 2px 2px 5px rgba(20, 90, 90, 0.06), inset -2px -2px 5px rgba(255, 255, 255, 0.85)',
+            'clay-inset-coral': 'inset 2px 2px 6px rgba(240, 120, 101, 0.12), inset -2px -2px 5px rgba(255, 255, 255, 0.9)',
+            'clay-badge': 'inset 1px 1px 3px rgba(20, 90, 90, 0.05), 2px 2px 6px rgba(20, 90, 90, 0.04)'
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #F4F8F5;
+        color: #203838;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* 1. BRANDED TEXT SELECTION STYLES */
+    ::selection {
+      background-color: #145A5A;
+      color: #FFFFFF;
+    }
+    ::-moz-selection {
+      background-color: #145A5A;
+      color: #FFFFFF;
+    }
+    .dark-surface, [class*="bg-[#145A5A]"], [class*="bg-teal-900"], .bg-deep-teal, footer {
+      &::selection, *::selection {
+        background-color: #E5F1EB;
+        color: #145A5A;
+      }
+      &::-moz-selection, *::-moz-selection {
+        background-color: #E5F1EB;
+        color: #145A5A;
+      }
+    }
+    [class*="bg-[#E5F1EB]"], [class*="bg-[#F4F8F5]"], .pale-mint-surface {
+      &::selection, *::selection {
+        background-color: #287C78;
+        color: #FFFFFF;
+      }
+      &::-moz-selection, *::-moz-selection {
+        background-color: #287C78;
+        color: #FFFFFF;
+      }
+    }
+    [class*="bg-[#F07865]"], .bg-coral, [class*="bg-accent-coral"] {
+      &::selection, *::selection {
+        background-color: #145A5A;
+        color: #FFFFFF;
+      }
+      &::-moz-selection, *::-moz-selection {
+        background-color: #145A5A;
+        color: #FFFFFF;
+      }
+    }
+    input, textarea, select {
+      user-select: text;
+    }
+
+    /* 2. CUSTOM ANIMATED CURSOR STYLES */
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      body, a, button, input, select, textarea {
+        cursor: none !important;
+      }
+      #cursor-dot, #cursor-ring {
+        display: block !important;
+      }
+    }
+    #cursor-dot {
+      display: none;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background-color: #145A5A;
+      border-radius: 50%;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, opacity 0.3s ease;
+      box-shadow: 0 0 8px rgba(20, 90, 90, 0.4);
+    }
+    #cursor-ring {
+      display: none;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid #287C78;
+      border-radius: 50%;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background-color 0.2s ease, opacity 0.3s ease, border-radius 0.25s ease;
+      box-shadow: 0 0 12px rgba(40, 124, 120, 0.25);
+    }
+    #cursor-ring.cursor-hover-link {
+      width: 44px;
+      height: 44px;
+      border-color: #287C78;
+      background-color: rgba(40, 124, 120, 0.08);
+      box-shadow: 0 0 16px rgba(40, 124, 120, 0.35);
+    }
+    #cursor-ring.cursor-hover-cta {
+      width: 48px;
+      height: 48px;
+      border-color: #F07865;
+      background-color: rgba(240, 120, 101, 0.12);
+      box-shadow: 0 0 20px rgba(240, 120, 101, 0.45);
+    }
+    #cursor-dot.cursor-dot-cta {
+      background-color: #F07865;
+      width: 9px;
+      height: 9px;
+      box-shadow: 0 0 10px rgba(240, 120, 101, 0.6);
+    }
+    #cursor-ring.cursor-hover-input {
+      width: 24px;
+      height: 34px;
+      border-radius: 6px;
+      border-color: #145A5A;
+      background-color: rgba(20, 90, 90, 0.05);
+    }
+    #cursor-ring.cursor-active {
+      transform: translate(-50%, -50%) scale(0.82) !important;
+    }
+    #cursor-ring.cursor-hidden, #cursor-dot.cursor-hidden {
+      opacity: 0 !important;
+    }
+  </style>
+<link rel="stylesheet" href="assets/ht-shared.css"/>
+<script src="assets/ht-data.js" defer></script>
+<script src="assets/ht-app.js" defer></script>
+</head>
+<body class="bg-surface-mint font-sans text-text-main antialiased selection:bg-surface-pale selection:text-primary relative">
+<!-- Dual-Element Cursor Container -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<!-- HEADER / NAVIGATION CHROME -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#F4F8F5]/90 backdrop-blur-md border-b border-border-neutral/60 shadow-[0_4px_16px_rgba(20,90,90,0.04)]">
+<div class="h-20 max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center justify-between gap-4">
+<!-- Brand Emblem -->
+<a class="flex items-center gap-3 group" href="#top" aria-label="Haider Tutors home">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center shadow-clay-btn-teal group-hover:scale-105 transition-transform duration-200 border border-primary/20">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-primary leading-none">HAIDER TUTORS</span>
+<span class="inline-block px-1.5 py-0.2 rounded-md bg-accent-coral/15 text-accent-coral font-extrabold text-[9px] uppercase tracking-wider border border-accent-coral/30">Global</span>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-secondary leading-tight mt-1">Global Academic Excellence</span>
+</div>
+</a>
+<!-- Navigation Pills -->
+<nav class="hidden xl:flex items-center gap-1.5 p-1.5 rounded-full bg-surface-pale/70 border border-border-neutral/60 shadow-clay-inset">
+<a aria-current="page" class="px-4 py-1.5 rounded-full text-sm font-bold text-primary bg-surface-white shadow-[2px_2px_6px_rgba(20,90,90,0.08)] transition-all" data-path="home" href="#top">Home</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="how-it-works" href="#how-it-works">How It Works</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="for-parents" href="#for-parents">For Parents</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="for-tutors" href="#for-tutors">For Tutors</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="countries" href="#countries">Countries</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="about" href="#about">About</a>
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-text-muted hover:text-primary hover:bg-surface-white/50 transition-all" data-path="contact" href="#contact">Contact</a>
+</nav>
+<!-- Header Actions -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale hover:border-secondary/40 transition-all" data-path="login" href="parent/login.html">Login</a>
+<button id="ht-mobile-menu-btn" class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white" aria-label="Open menu" aria-expanded="false">
+<span class="material-symbols-outlined text-[22px]">menu</span>
+</button>
+<a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-accent-coral via-[#FA6B55] to-accent-coral-hover shadow-clay-btn-coral hover:brightness-105 active:scale-[0.98] transition-all border border-accent-coral-light/30" data-path="get-started" href="#tuition-request">
+<span>Get Started</span>
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+</a>
+<div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary text-white hidden sm:flex items-center justify-center shadow-clay-btn-teal cursor-pointer hover:scale-105 transition-all" title="Account">
+<span class="material-symbols-outlined text-[19px]">person</span>
+</div>
+</div>
+<div id="ht-mobile-menu" class="xl:hidden hidden absolute top-full left-0 w-full bg-surface-white/95 backdrop-blur-md border-b border-border-neutral shadow-clay-card z-40">
+<nav class="max-w-[1360px] mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Mobile">
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#top">Home</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#how-it-works">How It Works</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#for-parents">For Parents</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#for-tutors">For Tutors</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#subjects">Subjects &amp; Levels</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#countries">Countries</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#about">About</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#faq">FAQ</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-semibold text-text-main hover:bg-surface-pale" href="#contact">Contact</a>
+<a class="px-4 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-accent-coral to-accent-coral-hover mt-1 text-center" href="parent/login.html">Login / Get Started</a>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface-mint min-h-[calc(100vh-5rem)]">
+<div class="flex flex-col w-full">
+<!-- Interactive Region Quick Selector Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/45 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300" id="region-modal">
+<div class="w-full max-w-xl p-6 lg:p-7 rounded-[24px] bg-surface-white border border-border-neutral shadow-[14px_14px_36px_rgba(20,90,90,0.2),-8px_-8px_24px_rgba(255,255,255,1)] flex flex-col gap-5 transform scale-95 transition-transform duration-300 relative overflow-hidden" id="region-modal-container">
+<!-- Subtle decorative top accent bar -->
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-accent-coral"></div>
+<div class="flex items-center justify-between pb-3 border-b border-border-neutral pt-1">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-pale text-primary flex items-center justify-center shadow-clay-inset border border-secondary/20">
+<span class="material-symbols-outlined text-[22px] text-secondary">travel_explore</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-primary leading-tight">Select Academic Territory</h4>
+<p class="text-xs text-text-muted mt-0.5">Configure regional curriculum alignment &amp; tuition modes</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-pale/80 text-text-muted hover:text-primary hover:bg-surface-pale flex items-center justify-center transition-all" onclick="toggleRegionModal(false)">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="text-xs font-bold text-primary uppercase tracking-wide block mb-1.5">Country Hub</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-medium text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none appearance-none pr-8 transition-colors" id="modal-country-select" onchange="updateModalCities(this.value)">
+<option value="pk">Pakistan (Islamabad HQ)</option>
+<option value="us">United States</option>
+<option value="uk">United Kingdom</option>
+<option value="ca">Canada</option>
+<option value="ae">United Arab Emirates</option>
+<option value="sa">Saudi Arabia</option>
+<option value="qa">Qatar</option>
+<option value="au">Australia</option>
+<option value="de">Germany</option>
+<option value="jp">Japan</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-text-muted text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="text-xs font-bold text-primary uppercase tracking-wide block mb-1.5">City / Region Division</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-medium text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none appearance-none pr-8 transition-colors" id="modal-city-select">
+<option value="isb">Islamabad (Federal Capital)</option>
+<option value="rwp">Rawalpindi</option>
+<option value="lhr">Lahore</option>
+<option value="khi">Karachi</option>
+<option value="pew">Peshawar</option>
+<option value="mux">Multan</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-text-muted text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-pale/80 border border-secondary/20 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="text-xs text-text-muted leading-relaxed">
+            In-person home tuition is operated in selected urban centers across Pakistan &amp; GCC partner corridors. Virtual 1-on-1 classrooms remain active 24/7 across all global territories.
+          </p>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-5 py-2 rounded-full text-sm font-semibold text-secondary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale transition-all" onclick="toggleRegionModal(false)">
+            Dismiss
+          </button>
+<button class="px-6 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-clay-btn-teal hover:brightness-110 transition-all border border-secondary/30" onclick="confirmRegionSelection()">
+            Apply Region Settings
+          </button>
+</div>
+</div>
+</div>
+<!-- SECTION 1: HERO SECTION -->
+<section id="top" class="ht-public-hero relative w-full max-w-[1360px] mx-auto px-4 lg:px-8 pt-12 pb-16 flex flex-col gap-12 overflow-visible">
+<!-- Multi-layered Ambient Glows in Teal, Coral & Amber -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] max-w-[100vw] h-[340px] bg-gradient-to-r from-[#aeeeed]/40 via-[#ffdad4]/30 to-[#a2f1eb]/35 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+<div class="absolute top-36 right-12 w-64 h-64 bg-accent-amber/15 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+<div class="absolute top-48 left-12 w-64 h-64 bg-accent-coral/15 blur-3xl -z-10 rounded-full pointer-events-none"></div>
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto gap-6">
+<!-- Institutional Emblem Pill Badge with Warm Coral & Amber Accents -->
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-white border border-border-neutral shadow-clay-btn-white">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-coral opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-coral"></span>
+</span>
+<span class="text-[11px] uppercase tracking-widest text-primary font-bold">Academic Coordination System</span>
+<span class="text-border-neutral">•</span>
+<span class="inline-flex items-center gap-1 text-xs text-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+            HQ Islamabad, Pakistan
+          </span>
+</div>
+<!-- Main Headline with Gradient Text Accent -->
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight max-w-3xl leading-[1.15]">
+          Find the Right Tutor.<br/>
+<span class="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Learn Better.</span> <span class="relative inline-block text-primary">Achieve More.<span class="absolute -bottom-1 left-0 w-full h-1.5 bg-accent-coral/40 rounded-full"></span></span>
+</h1>
+<!-- Detailed Tagline -->
+<p class="text-lg text-text-muted max-w-2xl leading-relaxed">
+          A structured academic platform connecting families with vetted educators for home, online, and hybrid tuition. Headquartered in Islamabad, Pakistan, coordinating bespoke learning solutions across 10 international markets.
+        </p>
+<!-- Live Confidence Micro-Badges -->
+<div class="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-emerald-light border border-accent-emerald/30 text-accent-emerald text-xs font-bold shadow-sm">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span>Vetted Tutors in 10 Countries</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-amber-light border border-accent-amber/40 text-[#9E6517] text-xs font-bold shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-accent-amber">grade</span>
+<span>99.4% Student Satisfaction</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-pale border border-border-neutral text-secondary text-xs font-bold shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-accent-coral">flash_on</span>
+<span>Direct Academic Review</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary border border-primary/20 shadow-clay-btn-teal hover:brightness-110 active:scale-[0.98] transition-all" href="#tuition-request">
+<span class="material-symbols-outlined text-[20px] text-accent-coral">assignment_turned_in</span>
+<span>Submit a Tuition Request</span>
+</a>
+<a class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-bold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale hover:border-secondary/40 active:scale-[0.98] transition-all" href="#become-tutor">
+<span class="material-symbols-outlined text-[20px] text-secondary">history_edu</span>
+<span>Become a Tutor</span>
+</a>
+</div>
+</div>
+<!-- Institutional Positioning Clay Ribbon with Colored Accents -->
+<div class="w-full p-6 lg:p-7 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card grid grid-cols-1 md:grid-cols-3 gap-5 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-accent-coral to-accent-amber opacity-60"></div>
+<!-- Card 1 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-secondary/30 transition-colors group">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-surface-pale to-[#CDE8E7] border border-secondary/20 flex items-center justify-center shrink-0 shadow-[2px_2px_6px_rgba(20,90,90,0.08)] group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-[24px]">apartment</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-wider text-secondary">Central Operations</span>
+<span class="text-sm font-bold text-primary">Headquartered in Islamabad, PK</span>
+<span class="text-xs text-text-muted">Sector F-7/Blue Area Academic Hub</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-accent-coral/30 transition-colors group">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#ffdad4]/40 to-surface-pale border border-accent-coral/30 flex items-center justify-center shrink-0 shadow-[2px_2px_6px_rgba(240,120,101,0.12)] group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-coral text-[24px]">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-wider text-accent-coral font-bold">Curriculum Mastery</span>
+<span class="text-sm font-bold text-primary">O/A Levels, IB, AP &amp; Boards</span>
+<span class="text-xs text-text-muted">Cambridge, Edexcel, Federal &amp; FBISE</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-accent-amber/30 transition-colors group">
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent-amber-light to-surface-pale border border-accent-amber/40 flex items-center justify-center shrink-0 shadow-[2px_2px_6px_rgba(234,168,80,0.12)] group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-amber text-[24px]">tune</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-wider text-[#A96B21]">Structured Modes</span>
+<span class="text-sm font-bold text-primary">Home, Online &amp; Hybrid Tuition</span>
+<span class="text-xs text-text-muted">Preserving pedagogical focus</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: WHAT WE DO (Platform Purpose & Core Operations) -->
+<section class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-14 flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-xl flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Platform Architecture
+        </span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Academic Clarity, Purposefully Structured</h2>
+<p class="text-base text-text-muted">
+          We eschew the chaos of unstructured tutor classifieds and public marketplaces. Every requirement undergoes formal pedagogical scrutiny and verified coordination.
+        </p>
+</div>
+<div class="px-4 py-2 rounded-full bg-surface-white border border-accent-coral/30 shadow-clay-card-coral flex items-center gap-2 self-start md:self-auto">
+<span class="material-symbols-outlined text-accent-coral text-[18px]">gavel</span>
+<span class="text-xs text-primary font-bold">Academic Governance Protocol Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 (Teal Accent Bar) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card hover:shadow-clay-card-hover transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-primary"></div>
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-surface-pale to-surface-mint border border-secondary/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-secondary text-[24px]">fact_check</span>
+</div>
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-pale text-secondary text-[10px] font-bold uppercase tracking-wider mb-2">Step 01 Intake</div>
+<h3 class="text-lg font-bold text-primary mb-2">Tuition Requirement Review</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              Parents submit a detailed diagnostic specification including the exact board syllabus, examination deadlines, prior academic bottlenecks, and preferred session timings.
+            </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-neutral flex items-center justify-between text-secondary">
+<span class="text-xs font-bold uppercase tracking-wider">Pedagogical Intake Audit</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 (Coral Accent Bar) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card hover:shadow-clay-card-hover transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-coral to-accent-coral-hover"></div>
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#ffdad4]/40 to-surface-mint border border-accent-coral/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-coral text-[24px]">verified_user</span>
+</div>
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-accent-coral/10 text-accent-coral text-[10px] font-bold uppercase tracking-wider mb-2">Step 02 Vetting</div>
+<h3 class="text-lg font-bold text-primary mb-2">Qualified Educator Network</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              Our roster comprises strictly vetted subject specialists from prestigious academic institutions with validated track records across O/A Levels, IGCSE, IB, and University prep.
+            </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-neutral flex items-center justify-between text-accent-coral">
+<span class="text-xs font-bold uppercase tracking-wider">Credentials &amp; Syllabus Vetted</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 (Emerald Accent Bar) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card hover:shadow-clay-card-hover transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-emerald to-secondary"></div>
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-emerald-light to-surface-mint border border-accent-emerald/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-emerald text-[24px]">hub</span>
+</div>
+<div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-accent-emerald-light text-accent-emerald text-[10px] font-bold uppercase tracking-wider mb-2">Step 03 Deployment</div>
+<h3 class="text-lg font-bold text-primary mb-2">Transparent Coordination</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              No cold calls, spam messaging, or uncontrolled bidder wars. Engagements are scheduled through dedicated portals with trial lesson coordination and milestone tracking.
+            </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-neutral flex items-center justify-between text-accent-emerald">
+<span class="text-xs font-bold uppercase tracking-wider">Institutional Governance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: HOW IT WORKS (Dual-Flow Structured Columns) -->
+<section id="how-it-works" class="w-full bg-surface-pale/40 border-y border-border-neutral/60 py-16 scroll-mt-24">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col gap-10">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Standardized Workflow</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">How Haider Tutors Coordinates Excellence</h2>
+<p class="text-base text-text-muted">
+          Clear, accountable, and rigorous pathways for both families seeking guidance and educators seeking structured assignments.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Pathway A: Parent & Student Pathway -->
+<div id="for-parents" class="p-7 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between gap-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-[#aeeeed]"></div>
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between pb-3 border-b border-border-neutral pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-pale text-primary flex items-center justify-center border border-border-neutral">
+<span class="material-symbols-outlined text-secondary text-[20px]">family_restroom</span>
+</div>
+<h3 class="text-xl font-bold text-primary">For Parents &amp; Students</h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-pale border border-border-neutral text-xs font-bold text-secondary">Client Pathway</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Step 1 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-secondary/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-teal">1</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Submit Tuition Requirements</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    Detail your child's syllabus (e.g. Cambridge 0580 Mathematics), grade level, targets, available hours, and delivery format (in-home, online, or hybrid).
+                  </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-secondary/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-teal">2</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Academic Evaluation &amp; Matching</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    Our academic officers evaluate the inquiry against certified tutor specializations, learning temperaments, and schedule feasibility.
+                  </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-secondary/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-teal">3</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Trial Session &amp; Portal Enrollment</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    A coordinated initial diagnostic trial session is conducted. Once approved, the tuition schedule is formalized with parent portal visibility.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-clay-btn-teal hover:brightness-110 active:scale-[0.98] transition-all border border-secondary/30" href="#tuition-request">
+<span>Initiate Parent Intake</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Pathway B: Tutor Pathway -->
+<div id="for-tutors" class="p-7 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between gap-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent-coral via-accent-amber to-secondary"></div>
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between pb-3 border-b border-border-neutral pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#ffdad4]/30 text-accent-coral flex items-center justify-center border border-accent-coral/20">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<h3 class="text-xl font-bold text-primary">For Academic Educators</h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-accent-coral/10 border border-accent-coral/20 text-xs font-bold text-accent-coral">Educator Pathway</span>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Step 1 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-accent-coral/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-accent-coral to-accent-coral-hover text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-coral">1</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Submit Verified Profile</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    Register academic credentials, degree transcripts, certified board training (Cambridge/IB/AP), and subject mastery dossiers.
+                  </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-accent-coral/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-accent-coral to-accent-coral-hover text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-coral">2</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Pedagogical Review &amp; Clearance</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    Undergo structured interview vetting, background cross-verification, and micro-teaching evaluation by our academic committee.
+                  </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset hover:border-accent-coral/30 transition-colors">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-accent-coral to-accent-coral-hover text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-clay-btn-coral">3</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Tutor Portal Assignment Access</span>
+<p class="text-xs text-text-muted mt-0.5 leading-relaxed">
+                    Approved educators gain portal credentials to view tailored tuition requests aligned with their expertise and accept managed bookings.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale hover:border-secondary/40 active:scale-[0.98] transition-all" href="#become-tutor">
+<span>Apply for Educator Accreditation</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: LEARNING OPTIONS (Tactile Clay Delivery Modes) -->
+<section id="subjects" class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 flex flex-col gap-8 scroll-mt-24">
+<div class="flex flex-col max-w-2xl gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Delivery Formats</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Flexible Learning Formats to Match Your Lifestyle</h2>
+<p class="text-base text-text-muted">
+        Every student’s concentration, schedule, and location differs. We structure three standardized teaching modalities without sacrificing rigor.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Option 1: Home Tuition (Emerald Tint) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent-emerald"></div>
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-emerald-light to-surface-mint border border-accent-emerald/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-emerald text-[28px]">home_pin</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-accent-emerald-light border border-accent-emerald/30 text-xs font-bold text-accent-emerald mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+              In-Person Discipline
+            </div>
+<h3 class="text-xl font-bold text-primary mb-2">Home Tuition</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              Structured 1-on-1 personalized instruction at the student’s residence. Recommended for foundational learners, hands-on science work, and focused board revision.
+            </p>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-border-neutral flex flex-col gap-1">
+<span class="text-xs font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-accent-emerald">location_on</span>
+            Regional Availability:
+          </span>
+<span class="text-xs text-text-muted">
+            Islamabad, Rawalpindi, Lahore, Karachi &amp; partner hubs.
+          </span>
+</div>
+</div>
+<!-- Option 2: Online Tuition (Teal Tint) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-surface-pale to-surface-mint border border-secondary/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-secondary text-[28px]">laptop_chromebook</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-pale border border-secondary/30 text-xs font-bold text-secondary mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Global Convenience
+            </div>
+<h3 class="text-xl font-bold text-primary mb-2">Online Tuition</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              High-definition interactive virtual classrooms equipped with dual-screen pen tablet whiteboards, recorded lesson archives, and digital past-paper repository support.
+            </p>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-border-neutral flex flex-col gap-1">
+<span class="text-xs font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">public</span>
+            Regional Availability:
+          </span>
+<span class="text-xs text-text-muted">
+            Global access across all 10 supported countries &amp; timezones.
+          </span>
+</div>
+</div>
+<!-- Option 3: Hybrid Tuition (Coral Tint) -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent-coral"></div>
+<div class="flex flex-col gap-4">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ffdad4]/40 to-surface-mint border border-accent-coral/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-coral text-[28px]">sync_alt</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-accent-coral/10 border border-accent-coral/30 text-xs font-bold text-accent-coral mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-coral"></span>
+              Blended Optimization
+            </div>
+<h3 class="text-xl font-bold text-primary mb-2">Hybrid Tuition</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+              Combines flexible mid-week online sessions for conceptual theory with weekend in-person intensive test-taking workshops and proctored mock examinations.
+            </p>
+</div>
+</div>
+<div class="pt-4 mt-6 border-t border-border-neutral flex flex-col gap-1">
+<span class="text-xs font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-accent-coral">tune</span>
+            Regional Availability:
+          </span>
+<span class="text-xs text-text-muted">
+            Available where in-person tutor nodes coincide with student residence.
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: SUBJECTS & ACADEMIC LEVELS (Strictly Informational Categories with Color Coding) -->
+<section id="faq" class="w-full bg-surface-pale/30 border-y border-border-neutral/60 py-16 scroll-mt-24">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-xl flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Curricular Scope</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Academic Subject Disciplines</h2>
+<p class="text-base text-text-muted">
+            Purely academic categorizations handled by specialist teaching coordinators. We cover core STEM branches, linguistic depth, and competitive prep.
+          </p>
+</div>
+<div class="text-right hidden md:block">
+<span class="inline-flex items-center gap-1.5 text-xs font-bold text-secondary px-3 py-1 rounded-full bg-surface-white border border-border-neutral shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-state-success"></span>
+            Strict adherence to standard exam boards
+          </span>
+</div>
+</div>
+<!-- Subject Categories Grid with Colorful Domain Badges & Icons -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Subject 1: Math (Teal) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-surface-pale to-surface-mint text-primary border border-secondary/30 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-secondary">calculate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Mathematics</h4>
+<span class="px-2 py-0.2 rounded-md bg-secondary/10 text-secondary text-[10px] font-bold">STEM</span>
+</div>
+<span class="text-xs text-secondary font-semibold mb-1">Pure, Applied &amp; Statistical</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              Algebra, Differential Calculus, Mechanics, Geometry, Vectors, Probability, Pure Math P1-P3, and Further Mathematics.
+            </p>
+</div>
+</div>
+<!-- Subject 2: Sciences (Emerald) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-emerald-light to-surface-mint text-accent-emerald border border-accent-emerald/30 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-accent-emerald">science</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Natural Sciences</h4>
+<span class="px-2 py-0.2 rounded-md bg-accent-emerald-light text-accent-emerald text-[10px] font-bold">Laboratories</span>
+</div>
+<span class="text-xs text-accent-emerald font-semibold mb-1">Theoretical &amp; Experimental Labs</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              Physics (Nuclear, Thermal, Quantum), Organic &amp; Inorganic Chemistry, Molecular Biology, and Environmental Systems.
+            </p>
+</div>
+</div>
+<!-- Subject 3: Languages (Plum / Coral) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#ffdad4]/30 to-surface-mint text-accent-coral border border-accent-coral/30 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-accent-coral">translate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Languages &amp; Literature</h4>
+<span class="px-2 py-0.2 rounded-md bg-accent-coral/10 text-accent-coral text-[10px] font-bold">Linguistics</span>
+</div>
+<span class="text-xs text-accent-coral font-semibold mb-1">Grammar, Rhetoric &amp; Composition</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              English Language &amp; Literature, Urdu (First &amp; Second Language), Classical Arabic, French, German, and conversational Japanese.
+            </p>
+</div>
+</div>
+<!-- Subject 4: Humanities (Amber / Gold) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-amber-light to-surface-mint text-accent-amber border border-accent-amber/40 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-accent-amber">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Humanities &amp; Commerce</h4>
+<span class="px-2 py-0.2 rounded-md bg-accent-amber-light text-[#9E6517] text-[10px] font-bold">Economics</span>
+</div>
+<span class="text-xs text-[#A96B21] font-semibold mb-1">Socio-Economic Frameworks</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              Micro/Macro Economics, Business Studies, Accounting, World History, Pakistan Studies, Sociology, and Political Science.
+            </p>
+</div>
+</div>
+<!-- Subject 5: Computer Science (Indigo) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#e8eeff] to-surface-mint text-[#3b5998] border border-[#3b5998]/30 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-[#3b5998]">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Computer Science &amp; IT</h4>
+<span class="px-2 py-0.2 rounded-md bg-[#e8eeff] text-[#3b5998] text-[10px] font-bold">Coding</span>
+</div>
+<span class="text-xs text-[#3b5998] font-semibold mb-1">Computational Logic &amp; Code</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              Python, Java, OOP, Relational Databases (SQL), Pseudocode, Logic Gates, Data Structures, and AP Computer Science A/Principles.
+            </p>
+</div>
+</div>
+<!-- Subject 6: Test Prep (Vibrant Coral / Gold) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex items-start gap-4 hover:shadow-clay-card-hover transition-all group">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#FEF5E7] to-[#ffdad4]/30 text-accent-coral border border-accent-coral/30 flex items-center justify-center shrink-0 shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-accent-coral">assignment</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="text-base font-bold text-primary">Standardized Test Prep</h4>
+<span class="px-2 py-0.2 rounded-md bg-accent-coral/10 text-accent-coral text-[10px] font-bold">Entrance</span>
+</div>
+<span class="text-xs text-accent-coral font-semibold mb-1">Admissions &amp; Entrance Exams</span>
+<p class="text-xs text-text-muted leading-relaxed">
+              Digital SAT, ACT, IELTS Academic, TOEFL iBT, Medical MDCAT, Engineering ECAT, and Graduate GRE quantitative strategy.
+            </p>
+</div>
+</div>
+</div>
+<!-- Academic Levels Bar with Multi-tinted Pills -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">layers</span>
+<h3 class="text-lg font-bold text-primary">Structured Levels &amp; Curricula Supported</h3>
+</div>
+<span class="text-xs font-semibold text-text-muted">Standardized Curricula</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="p-4 rounded-xl bg-surface-mint border border-border-neutral shadow-clay-inset flex flex-col hover:border-secondary/30 transition-colors">
+<span class="text-sm font-bold text-primary">Primary &amp; Middle</span>
+<span class="text-xs text-secondary font-semibold">Grades 1 – 8</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Foundational literacy, mental math, and disciplined homework routines.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-mint border border-secondary/20 shadow-clay-inset flex flex-col hover:border-secondary/40 transition-colors">
+<span class="text-sm font-bold text-primary">O-Levels / IGCSE</span>
+<span class="text-xs text-secondary font-semibold">Cambridge &amp; Edexcel</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Intensive topic revision, mark scheme breakdown, and topical past paper drill.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-mint border border-accent-coral/20 shadow-clay-inset flex flex-col hover:border-accent-coral/40 transition-colors">
+<span class="text-sm font-bold text-primary">A-Levels / FSc</span>
+<span class="text-xs text-accent-coral font-semibold">Higher Secondary</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Rigorous theoretical mastery, analytical problem solving, and board excellence.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-mint border border-accent-amber/30 shadow-clay-inset flex flex-col hover:border-accent-amber/50 transition-colors">
+<span class="text-sm font-bold text-primary">International Baccalaureate</span>
+<span class="text-xs text-[#A96B21] font-semibold">IB MYP &amp; DP</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Internal Assessments (IA), Extended Essay guidance, and Higher Level (HL) modules.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-mint border border-accent-emerald/20 shadow-clay-inset flex flex-col hover:border-accent-emerald/40 transition-colors">
+<span class="text-sm font-bold text-primary">AP &amp; University</span>
+<span class="text-xs text-accent-emerald font-semibold">College Board &amp; Undergrad</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Advanced Placement exam drills, calculus foundations, and college course tutoring.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: GLOBAL REACH & REGIONAL SELECTION -->
+<section class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-2xl flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-coral"></span>
+          Territorial Footprint
+        </span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Headquartered in Islamabad, Serving Families Worldwide</h2>
+<p class="text-base text-text-muted">
+          Our centralized operations hub in Islamabad manages coordinated academic liaison desks for 10 international markets, aligning syllabus time zones and cultural expectations.
+        </p>
+</div>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale hover:border-secondary/40 transition-all self-start md:self-auto" onclick="toggleRegionModal(true)">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>Configure Regional Hub</span>
+</button>
+</div>
+<!-- 10 Supported Countries Grid with Color Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- 1. Pakistan (HQ) -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-accent-coral/30 shadow-clay-card-coral flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-coral to-accent-coral-hover"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Pakistan</span>
+<span class="px-2 py-0.5 rounded-full bg-accent-coral text-white font-extrabold text-[9px] uppercase tracking-wider shadow-sm">HQ</span>
+</div>
+<span class="text-xs text-accent-emerald font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+            Home &amp; Online Tuition
+          </span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Islamabad, Rawalpindi, Lahore, Karachi, Peshawar, Quetta, Multan, Faisalabad.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>Central Operations</span>
+<span class="material-symbols-outlined text-[15px] text-accent-emerald">verified</span>
+</div>
+</div>
+<!-- 2. United States -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">United States</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">State-Aligned Tutoring</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            California, New York, Texas, Illinois, Florida, Virginia, Washington &amp; nationwide.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>AP &amp; Common Core</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 3. Canada -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Canada</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">Provincial Curricula</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Ontario (OSSD), British Columbia, Alberta, and Quebec international streams.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>IB &amp; OSSD Standards</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 4. United Kingdom -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">United Kingdom</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">Key Stages &amp; GCSE</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            London, Greater Manchester, Birmingham, Edinburgh, Leeds, Bristol.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>GCSE, AQA, Edexcel</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 5. United Arab Emirates -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-accent-coral/20 shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-coral to-secondary"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">UAE</span>
+<span class="px-2 py-0.5 rounded-full bg-accent-coral/10 text-accent-coral border border-accent-coral/30 text-[10px] font-bold">Hybrid</span>
+</div>
+<span class="text-xs text-accent-coral font-semibold">Gulf Academic Hub</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Dubai, Abu Dhabi, Sharjah, Ajman, and Ras Al Khaimah.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>KHDA / British / IB</span>
+<span class="material-symbols-outlined text-[15px] text-accent-coral">schedule</span>
+</div>
+</div>
+<!-- 6. Saudi Arabia -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-accent-coral/20 shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-coral to-secondary"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Saudi Arabia</span>
+<span class="px-2 py-0.5 rounded-full bg-accent-coral/10 text-accent-coral border border-accent-coral/30 text-[10px] font-bold">Hybrid</span>
+</div>
+<span class="text-xs text-accent-coral font-semibold">Kingdom Coverage</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Riyadh, Jeddah, Dammam, Khobar, Jubail, and Medina.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>International Schools</span>
+<span class="material-symbols-outlined text-[15px] text-accent-coral">schedule</span>
+</div>
+</div>
+<!-- 7. Qatar -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Qatar</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">Doha Liaison</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Doha, Al Rayyan, Al Wakrah, memory of Lusail, and Umm Salal.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>QNSA &amp; Cambridge</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 8. Australia -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Australia</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">ATAR &amp; VCE Prep</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Sydney, Melbourne, Brisbane, Perth, and Adelaide.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>HSC &amp; VCE Streams</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 9. Germany -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Germany</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">International &amp; STEM</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Berlin, Munich, Frankfurt, Hamburg, and Stuttgart.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>IB DP &amp; Abitur Math</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+<!-- 10. Japan -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary/40"></div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">Japan</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-pale text-secondary border border-secondary/30 text-[10px] font-bold">Online</span>
+</div>
+<span class="text-xs text-secondary font-semibold">Tokyo Desk</span>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+            Tokyo, Osaka, Nagoya, Yokohama, and Kyoto.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-neutral flex items-center justify-between text-[11px] text-primary font-semibold">
+<span>IB &amp; English Mediums</span>
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: WHY HAIDER TUTORS (Quality Standards & Governance) -->
+<section id="countries" class="w-full bg-surface-pale/40 border-y border-border-neutral/60 py-16 scroll-mt-24">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col gap-10">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">The Institutional Difference</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Why Families Rely On Haider Tutors</h2>
+<p class="text-base text-text-muted">
+          We operate as an academic governance institution, delivering structure, accountability, and pedagogical oversight at every stage.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-surface-pale to-surface-mint border border-primary/20 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-[24px]">assignment_turned_in</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-primary mb-1.5">Structured Intake</h4>
+<p class="text-xs text-text-muted leading-relaxed">
+              Every tuition request is processed via standardized academic criteria, avoiding the guesswork and mismatched expectations of informal private arrangements.
+            </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent-coral"></div>
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#ffdad4]/40 to-surface-mint border border-accent-coral/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-coral text-[24px]">verified</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-primary mb-1.5">Credential Verification</h4>
+<p class="text-xs text-text-muted leading-relaxed">
+              Direct verification of university degrees, past teaching credentials, and institutional teaching references prior to any assignment eligibility.
+            </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-surface-pale to-surface-mint border border-secondary/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-secondary text-[24px]">admin_panel_settings</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-primary mb-1.5">Role-Specific Portals</h4>
+<p class="text-xs text-text-muted leading-relaxed">
+              Parents monitor milestone summaries and session schedules in their portal, while tutors view qualified requests and log syllabus milestones.
+            </p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-6 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent-amber"></div>
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-amber-light to-surface-mint border border-accent-amber/40 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-accent-amber text-[24px]">language</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-primary mb-1.5">Cross-Border Alignment</h4>
+<p class="text-xs text-text-muted leading-relaxed">
+              Proficiency across British, North American, International Baccalaureate, and Pakistani Federal boards without cultural or communication friction.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: CALLS TO ACTION & INTAKE FORM WELL -->
+<section class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 flex flex-col gap-10" id="tuition-request">
+<div class="text-center max-w-xl mx-auto flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Direct Pathways</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Begin Your Academic Engagement</h2>
+<p class="text-base text-text-muted">
+        Select the appropriate gateway below to submit requirements, register teaching credentials, or access active portals.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Action 1: Submit Tuition Request (Primary Highlighted Card) -->
+<div class="p-6 rounded-[24px] bg-surface-white border border-accent-coral/30 shadow-clay-card-coral flex flex-col justify-between gap-5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent-coral to-accent-coral-hover"></div>
+<div class="flex flex-col gap-3 pt-1">
+<div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-coral to-accent-coral-hover text-white flex items-center justify-center shadow-clay-btn-coral group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">edit_note</span>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-accent-coral">Parents &amp; Students</span>
+<h3 class="text-xl font-bold text-primary leading-tight">Looking for Academic Support?</h3>
+<p class="text-xs text-text-muted leading-relaxed">
+            Submit a structured tuition inquiry. Specify subjects, curriculum, target grades, and preferred timings for review by our academic coordinator.
+          </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-accent-coral to-accent-coral-hover shadow-clay-btn-coral hover:brightness-105 active:scale-[0.98] transition-all border border-accent-coral-light/30" href="parent/login.html?next=submit-tuition.html">
+<span>Submit Tuition Request</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="text-[11px] text-center text-text-muted font-medium">Evaluated by Academic Committee</span>
+</div>
+</div>
+<!-- Action 2: Become a Tutor -->
+<div class="p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between gap-5 relative overflow-hidden group hover:shadow-clay-card-hover transition-all" id="become-tutor">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary to-secondary"></div>
+<div class="flex flex-col gap-3 pt-1">
+<div class="w-11 h-11 rounded-full bg-gradient-to-br from-surface-pale to-[#CDE8E7] text-primary border border-secondary/30 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-secondary">badge</span>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-secondary">Qualified Educators</span>
+<h3 class="text-xl font-bold text-primary leading-tight">Experienced Subject Specialist?</h3>
+<p class="text-xs text-text-muted leading-relaxed">
+            Apply to join our vetted tutor network. Gain access to verified tuition postings aligned with your subject expertise and teaching preferences.
+          </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale hover:border-secondary/40 active:scale-[0.98] transition-all" data-path="tutor-register" href="tutor/login.html?mode=register">
+<span>Become a Tutor</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<span class="text-[11px] text-center text-text-muted font-medium">Formal Credentials Required</span>
+</div>
+</div>
+<!-- Action 3: Access Portal -->
+<div class="p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col justify-between gap-5 relative overflow-hidden group hover:shadow-clay-card-hover transition-all">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent-amber to-secondary"></div>
+<div class="flex flex-col gap-3 pt-1">
+<div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-amber-light to-surface-mint text-accent-amber border border-accent-amber/40 flex items-center justify-center shadow-clay-inset group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px] text-accent-amber">lock</span>
+</div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-[#A96B21]">Active Members</span>
+<h3 class="text-xl font-bold text-primary leading-tight">Existing Students, Parents &amp; Tutors</h3>
+<p class="text-xs text-text-muted leading-relaxed">
+            Log in to manage confirmed lessons, view upcoming schedule commitments, and access tuition progress reports directly.
+          </p>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="grid grid-cols-2 gap-2">
+<a class="inline-flex items-center justify-center px-3 py-2.5 rounded-full text-xs font-bold text-primary bg-surface-pale border border-border-neutral shadow-clay-badge hover:bg-surface-white hover:border-secondary/40 transition-all" data-path="student-portal" href="parent/login.html">
+              Parent Portal
+            </a>
+<a class="inline-flex items-center justify-center px-3 py-2.5 rounded-full text-xs font-bold text-primary bg-surface-pale border border-border-neutral shadow-clay-badge hover:bg-surface-white hover:border-secondary/40 transition-all" data-path="tutor-portal" href="tutor/login.html">
+              Tutor Portal
+            </a>
+</div>
+<span class="text-[11px] text-center text-text-muted font-medium">Encrypted Multi-Factor Access</span>
+</div>
+</div>
+</div>
+<!-- Structured Intake Form Well (Clay Inset with Warm Gradient Border) -->
+<div class="mt-4 p-6 lg:p-8 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-6 relative overflow-hidden" id="intake-quick-form">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-accent-coral"></div>
+<div class="flex items-center justify-between pb-3 border-b border-border-neutral pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-pale text-primary flex items-center justify-center border border-border-neutral">
+<span class="material-symbols-outlined text-secondary text-[20px]">feed</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Diagnostic Tuition Intake Submission</h3>
+</div>
+<span class="inline-flex items-center gap-1.5 text-xs text-accent-emerald font-bold px-3 py-1 rounded-full bg-accent-emerald-light border border-accent-emerald/30">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+          Reviewed within 24 operational hours
+        </span>
+</div>
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="tuitionForm" onsubmit="event.preventDefault(); handleIntakeSubmit();">
+<div>
+<label class="text-xs font-bold text-primary block mb-1.5 uppercase tracking-wide">Parent / Guardian Name</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-normal text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="e.g. Dr. Salman Khan" required="" type="text"/>
+</div>
+<div>
+<label class="text-xs font-bold text-primary block mb-1.5 uppercase tracking-wide">Phone / WhatsApp</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-normal text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="+92 300 1234567" required="" type="tel"/>
+</div>
+<div>
+<label class="text-xs font-bold text-primary block mb-1.5 uppercase tracking-wide">Academic Subject(s)</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-normal text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="e.g. O-Level Physics, A-Level Math" required="" type="text"/>
+</div>
+<div>
+<label class="text-xs font-bold text-primary block mb-1.5 uppercase tracking-wide">Preferred Delivery Mode</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-normal text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none appearance-none pr-8">
+<option value="online">Interactive Online (Global)</option>
+<option value="home">Home Tuition (Select Cities)</option>
+<option value="hybrid">Hybrid (Blended Format)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 text-text-muted text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="sm:col-span-2 lg:col-span-3">
+<label class="text-xs font-bold text-primary block mb-1.5 uppercase tracking-wide">Specific Learning Objectives or Board Syllabus</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-white font-normal text-sm text-text-main border border-border-neutral shadow-clay-inset focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="e.g. Cambridge IGCSE 0625 Physics, targeting exam session May/June 2025" type="text"/>
+</div>
+<div class="sm:col-span-2 lg:col-span-1 flex items-end">
+<button class="w-full py-2.5 px-5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-clay-btn-teal hover:brightness-110 active:scale-[0.98] transition-all border border-secondary/30" type="submit">
+            Send Requirement
+          </button>
+</div>
+</form>
+<div class="hidden p-4 rounded-xl bg-accent-emerald-light border border-accent-emerald/40 text-accent-emerald text-xs font-bold items-center gap-3 flex-wrap" id="form-success-banner" style="display:none;">
+<span class="material-symbols-outlined text-[20px] text-accent-emerald shrink-0">check_circle</span>
+<span>Your tuition inquiry has been noted. To track it with a reference ID, continue in the
+<a class="underline font-extrabold" href="parent/login.html?next=submit-tuition.html">Parent/Student Portal</a>.</span>
+</div>
+</div>
+</section>
+<!-- SECTION 9: FREQUENTLY ASKED QUESTIONS (FAQ Accordion Cards) -->
+<section class="w-full bg-surface-pale/30 border-y border-border-neutral/60 py-16">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col gap-10">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Inquiries &amp; Policies</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Frequently Asked Questions</h2>
+<p class="text-base text-text-muted">
+          Clear, candid answers regarding our institutional policies, vetting standards, and tuition management protocols.
+        </p>
+</div>
+<div class="max-w-3xl mx-auto w-full flex flex-col gap-3">
+<!-- FAQ 1 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">How does submitting a tuition request work?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              When a parent or student submits a requirement via our form, our academic intake committee analyzes the curriculum specifications, grade level, schedule requirements, and location constraints. We then notify qualified educators in our network who possess verified credentials in that specific subject and syllabus, facilitating a structured trial session.
+            </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">Is Haider Tutors an open tutor directory or public marketplace?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              No. Haider Tutors is not an open directory or ad listing board. We do not display public tutor profiles, ratings, or bidding wars. We operate as a structured academic facilitation platform where all interactions, educator assignments, and student requirements are mediated with institutional quality control.
+            </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">What qualifications do tutors need to register?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              Tutors must possess at minimum a relevant university undergraduate degree from an accredited institution, demonstrated mastery of specific exam board syllabi (such as Cambridge, Edexcel, IB, or FBISE), verifiable teaching or tutoring references, and must successfully complete our academic interview and pedagogical assessment.
+            </p>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">Which curriculum boards do you support?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              We provide comprehensive subject coverage across Cambridge International (CAIE O-Levels &amp; A-Levels), Pearson Edexcel, International Baccalaureate (IB MYP &amp; DP), College Board Advanced Placement (AP), US Common Core, Canadian Provincial Syllabi (including OSSD), and Pakistani Federal &amp; Provincial Boards (FBISE, Punjab, Sindh).
+            </p>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">How do online lessons take place?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              Virtual lessons occur within encrypted interactive classrooms featuring digital whiteboard technology, real-time problem-solving with graphics tablet inputs, past-paper annotation, and recorded summaries for continuous student revision.
+            </p>
+</div>
+</div>
+<!-- FAQ 6 -->
+<div class="p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-2 cursor-pointer select-none hover:shadow-clay-card-hover transition-all" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h4 class="text-base font-bold text-primary">Can I request in-person home tuition outside Pakistan?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200">expand_more</span>
+</div>
+<div class="faq-content hidden pt-2 border-t border-border-neutral/60 mt-1">
+<p class="text-xs text-text-muted leading-relaxed">
+              In-person home tuition is primarily concentrated across urban centers in Pakistan (Islamabad, Rawalpindi, Lahore, Karachi) and select partner districts in the UAE and Saudi Arabia. For all other international territories (including US, UK, Canada, Australia, Germany, Japan), we exclusively deliver 1-on-1 virtual instruction.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+    function toggleFaq(element) {
+      var content = element.querySelector('.faq-content');
+      var icon = element.querySelector('.material-symbols-outlined');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function toggleRegionModal(show) {
+      var modal = document.getElementById('region-modal');
+      var container = document.getElementById('region-modal-container');
+      if (show) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        container.classList.remove('scale-95');
+        container.classList.add('scale-100');
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        container.classList.add('scale-95');
+        container.classList.remove('scale-100');
+      }
+    }
+
+    function updateModalCities(country) {
+      var citySelect = document.getElementById('modal-city-select');
+      var cities = {
+        pk: [
+          {val: 'isb', name: 'Islamabad (HQ)'},
+          {val: 'rwp', name: 'Rawalpindi'},
+          {val: 'lhr', name: 'Lahore'},
+          {val: 'khi', name: 'Karachi'},
+          {val: 'pew', name: 'Peshawar'},
+          {val: 'mux', name: 'Multan'}
+        ],
+        us: [
+          {val: 'ca', name: 'California (PST)'},
+          {val: 'ny', name: 'New York (EST)'},
+          {val: 'tx', name: 'Texas (CST)'},
+          {val: 'fl', name: 'Florida (EST)'},
+          {val: 'il', name: 'Illinois (CST)'}
+        ],
+        uk: [
+          {val: 'ldn', name: 'London / South East'},
+          {val: 'man', name: 'Manchester / North West'},
+          {val: 'bhm', name: 'Birmingham / Midlands'},
+          {val: 'sct', name: 'Scotland / Edinburgh'}
+        ],
+        ca: [
+          {val: 'on', name: 'Ontario (Toronto)'},
+          {val: 'bc', name: 'British Columbia (Vancouver)'},
+          {val: 'ab', name: 'Alberta (Calgary)'}
+        ],
+        ae: [
+          {val: 'dxb', name: 'Dubai'},
+          {val: 'auh', name: 'Abu Dhabi'},
+          {val: 'shj', name: 'Sharjah'}
+        ],
+        sa: [
+          {val: 'ruh', name: 'Riyadh'},
+          {val: 'jed', name: 'Jeddah'},
+          {val: 'dmm', name: 'Dammam / Khobar'}
+        ],
+        qa: [
+          {val: 'doh', name: 'Doha'},
+          {val: 'ray', name: 'Al Rayyan'}
+        ],
+        au: [
+          {val: 'syd', name: 'Sydney (AEST)'},
+          {val: 'mel', name: 'Melbourne (AEST)'},
+          {val: 'per', name: 'Perth (AWST)'}
+        ],
+        de: [
+          {val: 'ber', name: 'Berlin'},
+          {val: 'muc', name: 'Munich'},
+          {val: 'fra', name: 'Frankfurt'}
+        ],
+        jp: [
+          {val: 'tyo', name: 'Tokyo (JST)'},
+          {val: 'osa', name: 'Osaka (JST)'}
+        ]
+      };
+
+      var list = cities[country] || cities['pk'];
+      citySelect.innerHTML = '';
+      list.forEach(function(item) {
+        var opt = document.createElement('option');
+        opt.value = item.val;
+        opt.innerText = item.name;
+        citySelect.appendChild(opt);
+      });
+    }
+
+    function confirmRegionSelection() {
+      toggleRegionModal(false);
+    }
+
+    function handleIntakeSubmit() {
+      var banner = document.getElementById('form-success-banner');
+      banner.style.display = 'flex';
+      document.getElementById('tuitionForm').reset();
+      banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(function() { banner.style.display = 'none'; }, 9000);
+    }
+
+    /* 2. CUSTOM ANIMATED CURSOR INTERACTION SCRIPT (requestAnimationFrame Lerp) */
+    (function initCustomCursor() {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var dot = document.getElementById('cursor-dot');
+      var ring = document.getElementById('cursor-ring');
+      if (!dot || !ring) return;
+
+      var mouseX = -100;
+      var mouseY = -100;
+      var ringX = -100;
+      var ringY = -100;
+      var isVisible = false;
+
+      window.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!isVisible) {
+          isVisible = true;
+          dot.classList.remove('cursor-hidden');
+          ring.classList.remove('cursor-hidden');
+          ringX = mouseX;
+          ringY = mouseY;
+        }
+        dot.style.transform = 'translate(' + mouseX + 'px, ' + mouseY + 'px) translate(-50%, -50%)';
+      });
+
+      document.addEventListener('mouseleave', function() {
+        isVisible = false;
+        dot.classList.add('cursor-hidden');
+        ring.classList.add('cursor-hidden');
+      });
+
+      window.addEventListener('blur', function() {
+        isVisible = false;
+        dot.classList.add('cursor-hidden');
+        ring.classList.add('cursor-hidden');
+      });
+
+      window.addEventListener('mousedown', function() {
+        ring.classList.add('cursor-active');
+      });
+
+      window.addEventListener('mouseup', function() {
+        ring.classList.remove('cursor-active');
+      });
+
+      function renderCursor() {
+        if (isVisible) {
+          ringX += (mouseX - ringX) * 0.18;
+          ringY += (mouseY - ringY) * 0.18;
+          ring.style.transform = 'translate(' + ringX + 'px, ' + ringY + 'px) translate(-50%, -50%)';
+        }
+        requestAnimationFrame(renderCursor);
+      }
+      requestAnimationFrame(renderCursor);
+
+      function attachHoverListeners() {
+        var primaryCtas = document.querySelectorAll('a[href*="tuition-request"], button[type="submit"], [class*="bg-accent-coral"], [class*="bg-primary"]');
+        primaryCtas.forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            ring.classList.add('cursor-hover-cta');
+            dot.classList.add('cursor-dot-cta');
+          });
+          el.addEventListener('mouseleave', function() {
+            ring.classList.remove('cursor-hover-cta');
+            dot.classList.remove('cursor-dot-cta');
+          });
+        });
+
+        var standardInteractive = document.querySelectorAll('a, button, select, [onclick]');
+        standardInteractive.forEach(function(el) {
+          if ([].indexOf.call(primaryCtas, el) === -1) {
+            el.addEventListener('mouseenter', function() {
+              ring.classList.add('cursor-hover-link');
+            });
+            el.addEventListener('mouseleave', function() {
+              ring.classList.remove('cursor-hover-link');
+            });
+          }
+        });
+
+        var textInputs = document.querySelectorAll('input[type="text"], input[type="tel"], input[type="email"], textarea');
+        textInputs.forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            ring.classList.add('cursor-hover-input');
+          });
+          el.addEventListener('mouseleave', function() {
+            ring.classList.remove('cursor-hover-input');
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachHoverListeners);
+      } else {
+        attachHoverListeners();
+      }
+    })();
+  
+    /* ---- shared public-site interactions (wired navigation build) ---- */
+    (function () {
+      // mobile menu
+      var menuBtn = document.getElementById('ht-mobile-menu-btn');
+      var menu = document.getElementById('ht-mobile-menu');
+      if (menuBtn && menu) {
+        menuBtn.addEventListener('click', function () {
+          var open = menu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!open));
+        });
+        menu.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { menu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', 'false'); });
+        });
+      }
+      // privacy / terms modals
+      document.querySelectorAll('[data-ht-modal]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          var m = document.getElementById(trigger.getAttribute('data-ht-modal'));
+          if (m) { m.classList.remove('hidden'); m.classList.add('flex'); }
+        });
+      });
+      document.querySelectorAll('.ht-modal').forEach(function (m) {
+        m.addEventListener('click', function (e) {
+          if (e.target === m || e.target.closest('[data-ht-close]')) { m.classList.add('hidden'); m.classList.remove('flex'); }
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') document.querySelectorAll('.ht-modal').forEach(function (m) { m.classList.add('hidden'); m.classList.remove('flex'); });
+      });
+      // footer region selector -> sync region modal
+      var countrySel = document.getElementById('country-select');
+      if (countrySel) {
+        countrySel.addEventListener('change', function () {
+          var modalSel = document.getElementById('modal-country-select');
+          if (modalSel) {
+            for (var i = 0; i < modalSel.options.length; i++) {
+              if (modalSel.options[i].value === countrySel.value) { modalSel.selectedIndex = i; break; }
+            }
+            if (typeof updateModalCities === 'function') updateModalCities(countrySel.value);
+          }
+          toggleRegionModal(true);
+        });
+      }
+    })();
+</script>
+</main>
+
+<!-- CONTACT -->
+<section id="contact" class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 flex flex-col gap-8 scroll-mt-24">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-2">
+<span class="text-[11px] font-bold uppercase tracking-[0.2em] text-secondary">Contact</span>
+<h2 class="text-3xl font-extrabold text-primary tracking-tight">Talk to Our Academic Coordination Team</h2>
+<p class="text-base text-text-muted">Headquartered in Islamabad, Pakistan — coordinating vetted tuition for families and educators worldwide.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto w-full">
+<div class="p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4">
+<div class="w-11 h-11 rounded-full bg-surface-pale text-primary flex items-center justify-center shadow-clay-inset">
+<span class="material-symbols-outlined text-[22px]">family_restroom</span>
+</div>
+<h3 class="text-lg font-bold text-primary">For Parents &amp; Students</h3>
+<p class="text-sm text-text-muted leading-relaxed">Submit a tuition requirement or track an existing one through the Parent/Student Portal.</p>
+<a href="parent/login.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-clay-btn-teal hover:brightness-110 transition-all">Open Parent/Student Portal<span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<div class="p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4">
+<div class="w-11 h-11 rounded-full bg-surface-pale text-primary flex items-center justify-center shadow-clay-inset">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<h3 class="text-lg font-bold text-primary">For Tutors</h3>
+<p class="text-sm text-text-muted leading-relaxed">Join the vetted educator network and apply for tuition placements through the Tutor Portal.</p>
+<a href="tutor/login.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-bold text-primary bg-surface-white border border-border-neutral shadow-clay-btn-white hover:bg-surface-pale transition-all">Open Tutor Portal<span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</section>
+
+
+<!-- PRIVACY & TERMS MODALS -->
+<div id="privacy-modal" class="ht-modal fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-primary/45 backdrop-blur-md">
+<div class="w-full max-w-lg p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 max-h-[85vh] overflow-y-auto">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-primary">Privacy Policy</h3>
+<button class="w-9 h-9 rounded-full bg-surface-pale text-primary flex items-center justify-center" data-ht-close aria-label="Close"><span class="material-symbols-outlined text-[20px]">close</span></button>
+</div>
+<div class="text-sm text-text-muted leading-relaxed flex flex-col gap-3">
+<p>Haider Tutors collects only the details you submit — tuition requirements, academic information and contact details — to coordinate tutor matching and scheduling.</p>
+<p>Parent and student contact details are never shown in tutor-facing tuition listings. Personal contacts are withheld until a placement is confirmed by the academic coordination committee.</p>
+<p>Account details are used solely for portal access, placement updates and coordination messages. We do not sell personal information.</p>
+</div>
+</div>
+</div>
+<div id="terms-modal" class="ht-modal fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-primary/45 backdrop-blur-md">
+<div class="w-full max-w-lg p-6 rounded-[24px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col gap-4 max-h-[85vh] overflow-y-auto">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-primary">Terms &amp; Conditions</h3>
+<button class="w-9 h-9 rounded-full bg-surface-pale text-primary flex items-center justify-center" data-ht-close aria-label="Close"><span class="material-symbols-outlined text-[20px]">close</span></button>
+</div>
+<div class="text-sm text-text-muted leading-relaxed flex flex-col gap-3">
+<p>Tuition placements are coordinated by the Haider Tutors academic committee. Tutor profiles are credential-verified before any family introduction.</p>
+<p>Fees are confirmed at placement time and coordinated through the platform. Schedules are agreed between the family and the assigned tutor before sessions begin.</p>
+<p>Either party may end a placement with reasonable notice; the coordination team will arrange a suitable replacement where possible.</p>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-pale/60 text-text-main pt-16 pb-12 border-t border-border-neutral">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<!-- Col 1: Brand Info -->
+<div class="lg:col-span-2 flex flex-col gap-4 pr-lg-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center shadow-clay-btn-teal">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<span class="text-xl font-bold text-primary tracking-tight">HAIDER TUTORS</span>
+</div>
+<p class="text-xs text-text-muted max-w-md leading-relaxed">
+        Global tutoring network connecting families with structured academic solutions and qualified educators worldwide. Headquartered in Islamabad, Pakistan.
+      </p>
+<div class="flex items-center gap-3 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-white border border-border-neutral text-xs font-semibold text-secondary shadow-clay-badge">
+<span class="material-symbols-outlined text-[15px] text-accent-emerald">verified</span>
+          Academic Accreditation Standard
+        </span>
+</div>
+</div>
+<!-- Col 2: Explore -->
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Explore</span>
+<ul class="flex flex-col gap-2">
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="home" href="#top">Home</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="about" href="#about">About Haider Tutors</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="how-it-works" href="#how-it-works">How It Works</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="subjects-levels" href="#subjects">Subjects &amp; Levels</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="countries" href="#countries">Countries &amp; Locations</a></li>
+</ul>
+</div>
+<!-- Col 3: Portals & Solutions (STRICTLY NO ADMIN LINK) -->
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Portals &amp; Solutions</span>
+<ul class="flex flex-col gap-2">
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="for-parents" href="#for-parents">For Parents &amp; Students</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="for-tutors" href="#for-tutors">For Tutors</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="student-portal" href="parent/login.html">Parent/Student Portal</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="tutor-portal" href="tutor/login.html">Tutor Portal</a></li>
+</ul>
+</div>
+<!-- Col 4: Support & Trust -->
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Support &amp; Trust</span>
+<ul class="flex flex-col gap-2">
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="contact" href="#contact">Contact Us</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="faq" href="#faq">Frequently Asked Questions</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="privacy-policy" href="#privacy-modal" data-ht-modal="privacy-modal">Privacy Policy</a></li>
+<li class="text-xs"><a class="text-text-muted hover:text-primary transition-colors" data-path="terms-conditions" href="#terms-modal" data-ht-modal="terms-modal">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+</div>
+<!-- Supported Global Regions Clay Ribbon -->
+<div class="p-4 sm:p-5 rounded-[22px] bg-surface-white border border-border-neutral shadow-clay-card flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center gap-3">
+<span class="text-xs font-bold text-primary flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">public</span>
+        Supported Global Regions:
+      </span>
+<div class="flex flex-wrap items-center gap-2 text-text-muted text-xs">
+<a class="hover:text-primary font-bold text-primary transition-colors" data-path="countries" href="#countries">Pakistan (HQ)</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">United States</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Canada</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">United Kingdom</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">United Arab Emirates</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Saudi Arabia</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Qatar</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Australia</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Germany</a>
+<span class="text-border-neutral">•</span>
+<a class="hover:text-primary transition-colors" data-path="countries" href="#countries">Japan</a>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<label class="sr-only" for="country-select">Select Region</label>
+<select class="px-3.5 py-1.5 rounded-xl bg-surface-mint font-medium text-xs text-text-main border border-border-neutral shadow-clay-inset focus:outline-none focus:border-secondary transition-colors" id="country-select">
+<option value="pk">Pakistan (Islamabad HQ)</option>
+<option value="us">United States</option>
+<option value="ca">Canada</option>
+<option value="uk">United Kingdom</option>
+<option value="ae">United Arab Emirates</option>
+<option value="sa">Saudi Arabia</option>
+<option value="qa">Qatar</option>
+<option value="au">Australia</option>
+<option value="de">Germany</option>
+<option value="jp">Japan</option>
+</select>
+</div>
+</div>
+<!-- Copyright -->
+<div class="pt-2 border-t border-border-neutral/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-text-muted">
+<p>© 2025 Haider Tutors. All rights reserved. Headquartered in Islamabad, Pakistan.</p>
+<p>Excellence in International &amp; National Curricula</p>
+</div>
+</div>
+</footer>
+</body></html>

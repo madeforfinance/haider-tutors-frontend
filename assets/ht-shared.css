@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Haider Tutors — shared layout corrections (ht-shared.css)
+   Purpose: fix real layout causes (container widths, flex/grid shrink,
+   breakpoints, overflow) across public site + both portals.
+   Design tokens untouched. No CSS `zoom`, no global transforms.
+   ========================================================================== */
+
+/* 1. Box model everywhere (Tailwind preflight already sets this, but the
+      CDN build used here ships without preflight — enforce it explicitly). */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+img, svg, video { max-width: 100%; height: auto; }
+
+/* 2. Flex/grid children must be allowed to shrink so long content cannot
+      force the track wider than the viewport. */
+.ht-shell main *, .ht-shell main *::before, .ht-shell main *::after { min-width: 0; }
+
+/* Filter pills live in a horizontal scroll strip: they must keep natural width */
+.filter-pill { flex-shrink: 0; }
+/* (scoped to portal mains to avoid touching unrelated components) */
+main > div, main > section, main > div > div { min-width: 0; }
+
+/* 3. Long unbroken strings (refs, emails, URLs) may break anywhere. */
+.ht-break, code, .ref-id { overflow-wrap: anywhere; word-break: normal; }
+
+/* 4. Tables: contain horizontal scroll inside the table wrapper, never the page. */
+.ht-table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.ht-table-scroll table { min-width: 640px; width: 100%; }
+
+/* 5. Inputs/selects/textareas/buttons must never exceed their parent. */
+input, select, textarea, button { max-width: 100%; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"],
+input[type="number"], select, textarea { width: 100%; }
+
+/* --------------------------------------------------------------------------
+   Portal shell: fixed 288px sidebar + fixed topbar → off-canvas drawer < 1024px
+   -------------------------------------------------------------------------- */
+.ht-sidebar { transition: transform .32s ease; }
+
+@media (max-width: 1023.98px) {
+  .ht-shell { padding-left: 0 !important; }
+  .ht-sidebar {
+    transform: translateX(-112%);
+    width: 17.5rem;
+    max-width: 86vw;
+    box-shadow: 12px 0 32px rgba(20, 90, 90, .18);
+  }
+  body.ht-nav-open .ht-sidebar { transform: translateX(0); }
+  .ht-topbar { left: 0 !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+  .ht-nav-scrim {
+    position: fixed; inset: 0; z-index: 45;
+    background: rgba(20, 56, 56, .35); backdrop-filter: blur(2px);
+  }
+  .ht-topbar .ht-searchwrap { display: none; } /* header search moves to page on mobile */
+}
+
+/* Hamburger: visible only below lg */
+.ht-menu-btn { display: none; }
+@media (max-width: 1023.98px) { .ht-menu-btn { display: inline-flex; } }
+
+/* --------------------------------------------------------------------------
+   Public site corrections
+   -------------------------------------------------------------------------- */
+.ht-public-hero h1 { text-wrap: balance; }
+.ht-public-hero p  { text-wrap: pretty; }
+
+/* Prevent nav pill from colliding with CTA buttons on medium widths */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .ht-public-nav { gap: .25rem !important; }
+  .ht-public-nav a { padding-left: .8rem !important; padding-right: .8rem !important; font-size: .82rem; }
+}
+
+/* Decorative absolute layers (glows, blobs) must never widen the page */
+.ht-public-hero > div[class*="absolute"] { max-width: 100vw; }
+
+/* Country chips row: allow natural wrapping, never horizontal page scroll */
+.ht-chip-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+/* FAQ rows: keep chevron from shrinking away */
+.ht-faq-row > :last-child { flex-shrink: 0; }
+
+/* --------------------------------------------------------------------------
+   Small-screen typography guardrails (readability, not shrinkage)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .ht-shell main { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+/* Print: keep it simple */
+@media print {
+  .ht-sidebar, .ht-topbar, .ht-menu-btn { display: none !important; }
+  .ht-shell { padding-left: 0 !important; }
+}

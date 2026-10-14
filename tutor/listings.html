@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } .clay-card { box-shadow: 8px 8px 24px rgba(20, 90, 90, 0.08), -6px -6px 20px rgba(255, 255, 255, 0.95); } .clay-inset { box-shadow: inset 2px 2px 5px rgba(20, 90, 90, 0.06), inset -2px -2px 5px rgba(255, 255, 255, 0.85); } .clay-badge { box-shadow: 2px 3px 6px rgba(20, 90, 90, 0.06), -2px -2px 5px rgba(255, 255, 255, 0.9); } .clay-hover:hover { box-shadow: 12px 14px 28px rgba(20, 90, 90, 0.12), -8px -8px 24px rgba(255, 255, 255, 1.0); }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#93d2d1", "primary-fixed-dim": "#93d2d1", "on-primary-fixed": "#002020", "surface-tint": "#266868", "primary": "#004142", "on-primary": "#ffffff", "on-primary-fixed-variant": "#004f50", "on-surface": "#061f1f", "inverse-on-surface": "#dbf6f5", "primary-fixed": "#aeeeed", "on-secondary-container": "#16706c", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#82261a", "tertiary-container": "#903023", "secondary-container": "#a2f1eb", "background": "#e4fffe", "surface-variant": "#cde8e7", "surface-container-low": "#def9f8", "outline-variant": "#bfc8c8", "tertiary-fixed-dim": "#ffb4a7", "secondary-fixed": "#a2f1eb", "tertiary-fixed": "#ffdad4", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#00504d", "on-error": "#ffffff", "error": "#ba1a1a", "on-tertiary-container": "#ffb0a3", "inverse-surface": "#1c3434", "on-secondary-fixed": "#00201e", "on-surface-variant": "#3f4948", "on-error-container": "#93000a", "outline": "#6f7978", "secondary-fixed-dim": "#86d4cf", "on-tertiary-fixed": "#400100", "on-primary-container": "#90cfce", "error-container": "#ffdad6", "surface-dim": "#c5dfdf", "surface-container": "#d8f3f2", "surface": "#e4fffe", "surface-container-highest": "#cde8e7", "on-background": "#061f1f", "tertiary": "#70190f", "primary-container": "#145a5a", "surface-container-lowest": "#ffffff", "surface-container-high": "#d3eded", "surface-bright": "#e4fffe", "secondary": "#086a66" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-2xl": "3rem", "margin": "3rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-3xl": "4.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "50px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><link rel="stylesheet" href="../assets/ht-shared.css"/>
+<script src="../assets/ht-data.js" defer></script>
+<script src="../assets/ht-app.js" defer></script>
+</head><body class="bg-surface-container-low font-body-md text-body-md text-on-surface antialiased min-h-full"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 px-4 shadow-[8px_0_24px_rgba(20,90,90,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[4px_6px_14px_rgba(20,90,90,0.2),inset_0_1px_1px_rgba(255,255,255,0.35)]"><span class="material-symbols-outlined text-[24px]">school</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold truncate">Haider Tutors</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate uppercase tracking-wider">Faculty Workspace • ISB</span></div></div><div class="px-3"><div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center justify-between clay-badge"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Portal Node ISB-HQ</span></div><span class="font-label-sm text-label-sm text-secondary font-bold">ONLINE</span></div></div><nav class="flex flex-col gap-1.5 pt-2" data-active-classes="bg-primary text-on-primary font-label-lg text-label-lg shadow-[4px_6px_14px_rgba(20,90,90,0.2),inset_0_1px_1px_rgba(255,255,255,0.3)]"><a class="flex items-center gap-3.5 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-3.5 px-4 py-3 rounded-xl transition-all duration-200 bg-primary text-on-primary font-label-lg text-label-lg shadow-[4px_6px_14px_rgba(20,90,90,0.2),inset_0_1px_1px_rgba(255,255,255,0.3)]" data-path="tuition-listings" href="listings.html"><span class="material-symbols-outlined text-[22px]">manage_search</span><span>Tuition Listings</span></a><a class="flex items-center gap-3.5 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="my-applications" href="applications.html"><span class="material-symbols-outlined text-[22px]">assignment_turned_in</span><span>My Applications</span></a><a class="flex items-center gap-3.5 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200" data-path="my-tutor-profile" href="profile.html"><span class="material-symbols-outlined text-[22px]">badge</span><span>My Tutor Profile</span></a></nav></div><div class="flex flex-col gap-4 px-2"><div class="bg-surface-container-low rounded-2xl p-4 flex flex-col gap-2.5 clay-card"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-[16px]">verified</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface font-bold truncate">Vetted Senior Faculty</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">CAIE • Edexcel • IB</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-relaxed">Islamabad Global Operations Desk Accredited ID: HT-TUT-7721</p></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all duration-150" data-path="faculty-logout" href="login.html"><span class="material-symbols-outlined text-[20px]">logout</span><span>Log Out Session</span></a></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_12px_rgba(20,90,90,0.04)] px-8 flex items-center justify-between gap-6"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-4 text-outline text-[20px] pointer-events-none">search</span><input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl pl-11 pr-4 py-2.5 clay-inset border-none outline-none focus:ring-2 focus:ring-secondary/40 placeholder:text-outline transition-all" placeholder="Search available tuition listings, subject codes, or application IDs..." type="text"/></div></div><div class="flex items-center gap-4 shrink-0"><div class="hidden xl:flex items-center gap-2 bg-surface-container-low px-3.5 py-1.5 rounded-full clay-badge"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface font-bold">Accredited Faculty #HT-TUT-7721</span></div><button data-ht-demo="Notifications are not available in this demo preview." class="relative w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary clay-badge transition-colors"><span class="material-symbols-outlined<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Engr. Bilal Tariq</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[190px]">Physics &amp; CS • FAST-NUCES</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 px-8 pb-12 flex-1 bg-surface-container-low"><div class="flex flex-col w-full">
+<!-- Top Stat Micro-Bar & Header -->
+<section class="flex flex-col gap-6 mb-8">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm clay-badge">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Live Placement Stream
+        </span>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-tight">Verified Academic Hub Islamabad</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-2xl clay-card">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_turned_in</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available</span>
+</div>
+<span class="text-surface-variant">|</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">bolt</span>
+<span class="font-label-md text-label-md text-tertiary-container font-bold">5 Priority</span>
+</div>
+<span class="text-surface-variant">|</span>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">Faculty Verified</span>
+</div>
+</div>
+</div>
+<!-- Editorial Typography Title Block -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-2">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider mb-2 font-bold">
+<span>Official Roster</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+<span>Semester Cycle 2025</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">Available Tuition Listings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl leading-relaxed">
+          Explore vetted student requirements submitted by enrolled families and approved by the Haider Academic Coordination Committee. Only syllabus-verified faculty may submit formal placement applications.
+        </p>
+</div>
+<!-- Quick Tutor Eligibility Badge -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4 shrink-0 clay-card max-w-xs">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 clay-badge">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Matched Specialisms</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Physics (0625/9702) &amp; CS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Tier-1 Fast-Track Eligibility</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive Claymorphic Filter & Search Bar -->
+<section class="bg-surface-container-lowest p-5 rounded-2xl clay-card mb-8 flex flex-col gap-5">
+<!-- Top Search Input -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[22px] pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl pl-12 pr-12 py-3.5 clay-inset border-none outline-none focus:bg-surface-container-lowest transition-all placeholder:text-outline" id="listing-search-input" placeholder="Search by subject code (e.g. 0625, 9618), syllabus, city, or sector..." type="text"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors hidden" id="search-clear-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Filters Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+<!-- Subject Filter -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Subject Code</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-xl px-3.5 py-2.5 clay-inset border-none outline-none focus:bg-surface-container-lowest cursor-pointer" id="filter-subject">
+<option value="all">All Subjects</option>
+<option selected="" value="physics">Physics (0625/9702)</option>
+<option value="mathematics">Mathematics (4037/9709)</option>
+<option value="computer-science">Computer Science (0478/9618)</option>
+<option value="chemistry">Chemistry (0620/9701)</option>
+<option value="biology">Biology (0610/9700)</option>
+<option value="economics">Economics (0455/9708)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Academic Level Filter -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Academic Level</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-xl px-3.5 py-2.5 clay-inset border-none outline-none focus:bg-surface-container-lowest cursor-pointer" id="filter-level">
+<option value="all">All Levels</option>
+<option value="olevels">O-Levels / IGCSE</option>
+<option value="alevels">A-Levels / Pre-U</option>
+<option value="ib">IB (MYP / DP)</option>
+<option value="fsc">FSc / Matriculation</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Location Hub -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Location / Hub</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-xl px-3.5 py-2.5 clay-inset border-none outline-none focus:bg-surface-container-lowest cursor-pointer" id="filter-location">
+<option value="all">All Locations</option>
+<option value="isb">Islamabad &amp; Rawalpindi</option>
+<option value="lhr">Lahore Hub</option>
+<option value="khi">Karachi Hub</option>
+<option value="online">Online International</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Sort Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Sort Preference</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-xl px-3.5 py-2.5 clay-inset border-none outline-none focus:bg-surface-container-lowest cursor-pointer" id="filter-sort">
+<option value="newest">Newest Postings</option>
+<option value="urgency">Urgency: High Priority</option>
+<option value="budget-high">Budget: High to Low</option>
+<option value="sessions">Weekly Intensity</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">swap_vert</span>
+</div>
+</div>
+<!-- Reset & Counter Action -->
+<div class="flex flex-col justify-end">
+<button class="w-full h-[42px] bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md rounded-xl px-4 flex items-center justify-center gap-2 clay-badge transition-all" id="reset-filter-btn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Reset Filters</span>
+</button>
+</div>
+</div>
+<!-- Mode Pills Sub-strip -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t-0">
+<div class="flex items-center gap-2 flex-wrap" id="mode-pills-group">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold mr-1 uppercase tracking-wider">Mode:</span>
+<button class="mode-pill px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold clay-badge transition-all" data-mode="all">
+          All Modes (18)
+        </button>
+<button class="mode-pill px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface font-semibold clay-badge transition-all" data-mode="home">
+          Home Tuition (11)
+        </button>
+<button class="mode-pill px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface font-semibold clay-badge transition-all" data-mode="online">
+          Online Interactive (5)
+        </button>
+<button class="mode-pill px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:text-on-surface font-semibold clay-badge transition-all" data-mode="hybrid">
+          Hybrid (2)
+        </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Only verified address zones shown. Personal contacts withheld until match confirmation.</span>
+</div>
+</div>
+</section>
+<!-- Tuition Listings Grid -->
+<section class="flex flex-col gap-6" id="listings-container">
+<!-- Card 1 (URGENT / ALREADY APPLIED) -->
+<article class="listing-item bg-surface-container-lowest rounded-3xl p-6 lg:p-7 clay-card relative overflow-hidden transition-all duration-300 hover:shadow-[12px_14px_28px_rgba(20,90,90,0.12),-8px_-8px_24px_rgba(255,255,255,1.0)]" data-level="olevels" data-location="isb" data-mode="home" data-subject="physics" data-urgency="high">
+<!-- Top Metabar with Priority Flag -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="bg-tertiary-container/10 text-tertiary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="material-symbols-outlined text-[15px]">priority_high</span>
+            URGENT ALLOCATION
+          </span>
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full font-semibold clay-badge">
+            Ref: #HT-REQ-2025-0842
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Posted 2 days ago
+          </span>
+</div>
+<!-- Application Status Pill -->
+<div class="bg-secondary-container/60 text-primary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Applied: #APP-2025-0941 • Under Committee Review
+        </div>
+</div>
+<!-- Main Content Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left: Subject & Academic Details (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-3.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">0625</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">0620</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Cambridge Assessment International Education (CAIE)</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+              Cambridge IGCSE Physics (0625) &amp; Chemistry (0620)
+            </h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-semibold">Grade 10 • Accelerated Final Sitting Preparation</p>
+</div>
+<!-- Schedule & Logistics Pills Recessed Matrix -->
+<div class="bg-surface-container-low rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-3 clay-inset">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Zone / Delivery</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Islamabad, Sector F-7/2</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Home Tuition</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Commitment</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">3 Days / Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mon, Wed, Fri</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Time Slot</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">5:00 PM – 6:30 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PKT (90 mins/day)</span>
+</div>
+</div>
+</div>
+<!-- Academic Notes & Specific Focus -->
+<div class="flex items-start gap-3 bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">assignment_late</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Essential Academic Requirements:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Proven track record with Cambridge Paper 4 (Extended Theory) &amp; Paper 6 (Alternative to Practical). Student requires targeted past paper drilling on Electricity, Thermal Physics, and Stoichiometry calculations.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right: Remuneration & Application Action (4 cols) -->
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-5 bg-surface-container-low/60 rounded-2xl p-5 clay-card">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Approved Remuneration</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">45,000 PKR</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ Month</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Disbursed directly via Haider Escrow Node</span>
+</div>
+</div>
+<!-- Action for already applied status -->
+<div class="flex flex-col gap-2">
+<a href="tuition-details.html" class="w-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-lg text-label-lg py-3 rounded-xl clay-badge transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span>View Submitted Dossier</span>
+</a>
+</button>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">
+              Application submitted on Feb 22, 2025. Committee decision pending.
+            </span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 (NEW & PRIORITY - ONLINE EDEXCEL) -->
+<article class="listing-item bg-surface-container-lowest rounded-3xl p-6 lg:p-7 clay-card relative overflow-hidden transition-all duration-300 hover:shadow-[12px_14px_28px_rgba(20,90,90,0.12),-8px_-8px_24px_rgba(255,255,255,1.0)]" data-level="alevels" data-location="online" data-mode="online" data-subject="mathematics" data-urgency="high">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="material-symbols-outlined text-[15px]">fiber_new</span>
+            NEW POSTING
+          </span>
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full font-semibold clay-badge">
+            Ref: #HT-REQ-2025-0895
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Posted 1 day ago
+          </span>
+</div>
+<div class="bg-secondary-container/50 text-secondary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Accepting Faculty Submissions
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-8 flex flex-col gap-3.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">P1–P3</span>
+<span class="px-2.5 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">M1</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Pearson Edexcel International A-Level</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+              Pearson Edexcel A-Level Pure Mathematics (P1–P3) &amp; Mechanics (M1)
+            </h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-semibold">Year 12 (IAS &amp; IA2 Progression) • Global Interactive Node</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-3 clay-inset">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Location / Platform</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Online Interactive</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Dubai, UAE (UTC+04:00)</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Schedule Plan</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">4 Days / Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Flexible Weekdays</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">UAE Timing</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">6:30 PM – 8:00 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7:30 PM PKT Match</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">draw</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Essential Academic Requirements:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Mastery in calculus integration techniques, parametric equations, and Newton's second law vector mechanics. High-speed dual-screen stylus whiteboard setup required for live problem solving.
+              </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-5 bg-surface-container-low/60 rounded-2xl p-5 clay-card">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Approved International Rate</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">$250 USD</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">≈ 69,500 PKR Equivalent (Direct Forex Remit)</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Coral Action CTA -->
+<a href="tuition-details.html" class="apply-cta-btn w-full bg-tertiary-container hover:bg-tertiary text-on-primary font-label-lg text-label-lg py-3 rounded-xl clay-badge transition-all flex items-center justify-center gap-2 shadow-[4px_6px_16px_rgba(144,48,35,0.35)]">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>View Details &amp; Apply</span>
+</a>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>1-Click Verified Faculty Application</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3 (CAIE Additional Math) -->
+<article class="listing-item bg-surface-container-lowest rounded-3xl p-6 lg:p-7 clay-card relative overflow-hidden transition-all duration-300 hover:shadow-[12px_14px_28px_rgba(20,90,90,0.12),-8px_-8px_24px_rgba(255,255,255,1.0)]" data-level="olevels" data-location="isb" data-mode="hybrid" data-subject="mathematics" data-urgency="normal">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full font-semibold clay-badge">
+            Ref: #HT-REQ-2025-0902
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Posted 3 days ago
+          </span>
+<span class="bg-secondary-container/50 text-secondary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">
+            Hybrid Flexible
+          </span>
+</div>
+<div class="bg-secondary-container/50 text-secondary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Open for Applications
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-8 flex flex-col gap-3.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">4037</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Cambridge Assessment International Education (CAIE)</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+              Cambridge O-Level Additional Mathematics (4037)
+            </h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-semibold">Grade 11 • May/June 2026 Examination Series Candidate</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-3 clay-inset">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Zone / Sector</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Islamabad, DHA Phase 2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Home or Hybrid</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">event_repeat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Days &amp; Frequency</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">3 Days / Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tue, Thu, Sat</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">more_time</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Timings</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">4:00 PM – 5:30 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PKT (After School)</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">calculate</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Essential Academic Requirements:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                In-depth instructional focus on coordinate geometry, trigonometry proofs, permutations/combinations, and binomial expansions. Tutor must provide progressive topical quizzes.
+              </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-5 bg-surface-container-low/60 rounded-2xl p-5 clay-card">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Standard Remuneration</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">40,000 PKR</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Travel subsidy included for DHA Zone</span>
+</div>
+<div class="flex flex-col gap-2">
+<a href="tuition-details.html" class="apply-cta-btn w-full bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg py-3 rounded-xl clay-badge transition-all flex items-center justify-center gap-2 shadow-[4px_6px_14px_rgba(20,90,90,0.2)]">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>View Details &amp; Apply</span>
+</a>
+</button>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">Eligible for faculty fast-track vetting</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4 (Computer Science 9618 - Online UK) -->
+<article class="listing-item bg-surface-container-lowest rounded-3xl p-6 lg:p-7 clay-card relative overflow-hidden transition-all duration-300 hover:shadow-[12px_14px_28px_rgba(20,90,90,0.12),-8px_-8px_24px_rgba(255,255,255,1.0)]" data-level="alevels" data-location="online" data-mode="online" data-subject="computer-science" data-urgency="normal">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full font-semibold clay-badge">
+            Ref: #HT-REQ-2025-0870
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Posted 4 days ago
+          </span>
+<span class="bg-secondary-container/60 text-secondary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold">
+            UK Curriculum Series
+          </span>
+</div>
+<div class="bg-secondary-container/50 text-secondary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Open for Applications
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-8 flex flex-col gap-3.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">9618</span>
+<span class="px-2.5 py-0.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">P3 &amp; P4</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Cambridge International A-Level</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+              Computer Science (9618) - Paper 3 &amp; 4 (Python / OOP / Algorithms)
+            </h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-semibold">Year 13 Advanced • Practical Algorithm &amp; Data Structures Focus</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-3 clay-inset">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Location / Delivery</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Online Interactive</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">London, UK (GMT)</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">weekend</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Weekend Pattern</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">2 Days / Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saturday &amp; Sunday</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">alarm</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Timing Window</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">10:00 AM – 11:30 AM GMT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3:00 PM PKT</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">terminal</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Essential Academic Requirements:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Practical Python programming proficiency, recursion, binary trees, linked lists, object-oriented concepts, and Abstract Data Type (ADT) implementation. Student preparing for Paper 4 on-screen exam.
+              </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-5 bg-surface-container-low/60 rounded-2xl p-5 clay-card">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Approved UK Rate</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">£180 GBP</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">≈ 64,000 PKR Equivalent (Direct FX Escrow)</span>
+</div>
+<div class="flex flex-col gap-2">
+<a href="tuition-details.html" class="apply-cta-btn w-full bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg py-3 rounded-xl clay-badge transition-all flex items-center justify-center gap-2 shadow-[4px_6px_14px_rgba(20,90,90,0.2)]">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>View Details &amp; Apply</span>
+</a>
+</button>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">FAST-NUCES Profile Match Priority</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5 (IB MYP Integrated Sciences) -->
+<article class="listing-item bg-surface-container-lowest rounded-3xl p-6 lg:p-7 clay-card relative overflow-hidden transition-all duration-300 hover:shadow-[12px_14px_28px_rgba(20,90,90,0.12),-8px_-8px_24px_rgba(255,255,255,1.0)]" data-level="ib" data-location="isb" data-mode="home" data-subject="physics" data-urgency="normal">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-1 rounded-full font-semibold clay-badge">
+            Ref: #HT-REQ-2025-0855
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Posted 5 days ago
+          </span>
+<span class="bg-primary-fixed text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold">
+            IB World School Syllabus
+          </span>
+</div>
+<div class="bg-secondary-container/50 text-secondary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold flex items-center gap-1.5 clay-badge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Open for Applications
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-8 flex flex-col gap-3.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">MYP 4/5</span>
+<span class="font-label-md text-label-md text-secondary font-bold">International Baccalaureate (IB)</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+              IB Middle Years Programme (MYP) Integrated Sciences (Physics &amp; Chemistry)
+            </h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-semibold">Year 9 (MYP Phase 4) • Inquiry-Based Science Assessment Support</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 gap-3 clay-inset">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">home_pin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Location / Sector</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Islamabad, Sector F-8/3</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">In-Person Home Visit</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">date_range</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Weekly Cadence</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">3 Days / Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mon, Wed, Thu</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary clay-badge shrink-0">
+<span class="material-symbols-outlined text-[20px]">access_time</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Designated Slot</span>
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">4:30 PM – 6:00 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PKT (90 mins)</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">science</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Essential Academic Requirements:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Familiarity with IB Criterion A (Knowing and understanding) through Criterion D (Reflecting on the impacts of science) rubrics. Experience guiding inquiry lab write-ups and formative evaluations.
+              </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-5 bg-surface-container-low/60 rounded-2xl p-5 clay-card">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Approved Remuneration</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">50,000 PKR</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Premium Diplomatic Enclave Proximity Rate</span>
+</div>
+<div class="flex flex-col gap-2">
+<a href="tuition-details.html" class="apply-cta-btn w-full bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg py-3 rounded-xl clay-badge transition-all flex items-center justify-center gap-2 shadow-[4px_6px_14px_rgba(20,90,90,0.2)]">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>View Details &amp; Apply</span>
+</a>
+</button>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">Requires valid IB curriculum verification</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Empty State (Hidden by default, triggered when filters yield 0 results) -->
+<section class="hidden flex-col items-center justify-center text-center p-12 bg-surface-container-lowest rounded-3xl clay-card my-6" id="empty-state-view">
+<div class="w-20 h-20 rounded-3xl bg-surface-container-low flex items-center justify-center text-outline mb-5 clay-inset">
+<span class="material-symbols-outlined text-[44px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No tuition listings match your selected criteria</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2 mb-6">
+      No active student allocations match the exact combination of filters. Try broadening your subject selection, changing academic tier, or switching teaching mode.
+    </p>
+<button class="bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md px-6 py-3 rounded-xl clay-badge transition-all flex items-center gap-2" id="empty-reset-btn">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Reset All Filters</span>
+</button>
+</section>
+<!-- Safety & Integrity Operational Notice Footer -->
+<footer class="mt-12 bg-surface-container-lowest p-6 rounded-2xl clay-card flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/70 text-secondary flex items-center justify-center shrink-0 clay-badge">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Faculty Placement Governance Protocol</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+          Direct parent contact exchange occurs strictly post committee match confirmation and mutual syllabus alignment. All financial honorariums are guaranteed through the Haider Escrow Node.
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned Academic Officer:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-low px-3 py-1.5 rounded-lg clay-inset">
+        Sir Tariq Mehmood (Dean Oversight)
+      </span>
+</div>
+</footer>
+</div>
+<script>
+  (function initTuitionListings() {
+    const searchInput = document.getElementById('listing-search-input');
+    const searchClear = document.getElementById('search-clear-btn');
+    const filterSubject = document.getElementById('filter-subject');
+    const filterLevel = document.getElementById('filter-level');
+    const filterLocation = document.getElementById('filter-location');
+    const filterSort = document.getElementById('filter-sort');
+    const resetBtn = document.getElementById('reset-filter-btn');
+    const emptyResetBtn = document.getElementById('empty-reset-btn');
+    const modePills = document.querySelectorAll('.mode-pill');
+    const listings = document.querySelectorAll('.listing-item');
+    const listingsContainer = document.getElementById('listings-container');
+    const emptyState = document.getElementById('empty-state-view');
+
+    let currentMode = 'all';
+
+    function runFilters() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      const subjectVal = filterSubject.value;
+      const levelVal = filterLevel.value;
+      const locationVal = filterLocation.value;
+
+      if (query.length > 0) {
+        searchClear.classList.remove('hidden');
+      } else {
+        searchClear.classList.add('hidden');
+      }
+
+      let visibleCount = 0;
+
+      listings.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const cardSubject = card.getAttribute('data-subject');
+        const cardLevel = card.getAttribute('data-level');
+        const cardMode = card.getAttribute('data-mode');
+        const cardLoc = card.getAttribute('data-location');
+
+        const matchesQuery = query === '' || text.includes(query);
+        const matchesSubject = subjectVal === 'all' || cardSubject === subjectVal;
+        const matchesLevel = levelVal === 'all' || cardLevel === levelVal;
+        const matchesLoc = locationVal === 'all' || cardLoc === locationVal;
+        const matchesMode = currentMode === 'all' || cardMode === currentMode;
+
+        if (matchesQuery && matchesSubject && matchesLevel && matchesLoc && matchesMode) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        listingsContainer.classList.add('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+        listingsContainer.classList.remove('hidden');
+      }
+    }
+
+    // Mode Pill handler
+    modePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        modePills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+          p.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'font-semibold');
+        });
+        pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'font-semibold');
+        pill.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+        currentMode = pill.getAttribute('data-mode');
+        runFilters();
+      });
+    });
+
+    // Inputs
+    searchInput.addEventListener('input', runFilters);
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      runFilters();
+    });
+
+    filterSubject.addEventListener('change', runFilters);
+    filterLevel.addEventListener('change', runFilters);
+    filterLocation.addEventListener('change', runFilters);
+
+    function resetAll() {
+      searchInput.value = '';
+      filterSubject.value = 'all';
+      filterLevel.value = 'all';
+      filterLocation.value = 'all';
+      filterSort.value = 'newest';
+      currentMode = 'all';
+      modePills.forEach((p, idx) => {
+        if (idx === 0) {
+          p.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'font-semibold');
+          p.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+        } else {
+          p.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+          p.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'font-semibold');
+        }
+      });
+      runFilters();
+    }
+
+    resetBtn.addEventListener('click', resetAll);
+    emptyResetBtn.addEventListener('click', resetAll);
+
+    // Micro-interaction for Apply CTAs
+    const applyButtons = document.querySelectorAll('.apply-cta-btn');
+    applyButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const prevText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Opening Application Modal...</span>';
+        this.disabled = true;
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Application Initiated</span>';
+          this.classList.remove('bg-tertiary-container', 'bg-primary');
+          this.classList.add('bg-secondary');
+        }, 600);
+      });
+    });
+
+    // Initial check
+    runFilters();
+  })();
+</script></main></div></body></html>
